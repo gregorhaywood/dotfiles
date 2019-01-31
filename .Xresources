@@ -1,0 +1,39 @@
+! Reload with $ xrdb ~/.Xresources
+
+! make the background transparent
+URxvt.transparent: true
+URxvt.shading: 20
+urxvt*blurRadius: 10
+urxvt*foreground: #ffffff
+
+! Copy and paste 
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+! Scrolling
+URxvt*skipScroll:  true
+URxvt*scrollBar:  false
+
+! Focus
+URxvt*fading: 30
+
+! Cursor 
+URxvt.cursorUnderline: true
+
+
+! Fonts
+
+! URxvt*letterSpace: -1
+! URxvt*font: xft:Hack-Regular:size=10
+! URxvt*boldFont: xft:Hack-Bold:size=10
+! URxvt*italicFont: xft:Hack-Italic:size=10
+
+URxvt*font: xft:FantasqueSansMono-Regular:size=12
+URxvt*boldFont: xft:FantasqueSansMono-Bold:size=12
+URxvt*italicFont: xft:FantasqueSansMono-Italic:size=12
+
+
+
+
+
+
