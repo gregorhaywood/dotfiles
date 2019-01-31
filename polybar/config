@@ -1,0 +1,217 @@
+[colors]
+background = #262626 
+background-alt = #202020
+foreground = #bbb
+foreground-alt = #888
+line = #1a1a1a
+mid = #ff0
+bad =  #f00
+good =  #0f0
+casual = #1ad1ff
+bar = ${self.casual}
+
+
+[bar/status]
+; laptop monitor
+; top bar
+monitor = eDP-1
+bottom = false
+width = 100%
+height = 22
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+padding = 0
+module-margin = 0
+
+; fonts
+font-0 = FantasqueSansMono-Regular:size=10;0
+font-1 = FantasqueSansMono-Bold:size=10;0
+font-2 = FantasqueSansMono-Italic:size=10;0
+font-3 = FontAwesome-Regular:size=10
+font-4 = FontAwesome-Brands:size=10
+font-5 = FontAwesome-Solid:size=10
+
+modules-left = i3 xwindow 
+modules-right = network filesystem xbacklight audio battery date 
+
+[module/xwindow]
+type = internal/xwindow
+label = %title%
+label-maxlen = 50
+format-underline = ${colors.casual}
+label-padding = 1
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+mount-0 = /
+label-mounted =  %percentage_used%%
+label-unmounted = %mountpoint% !
+label-mounted-underline =  ${colors.good} 
+label-unmounted-underline =  ${colors.bad} 
+label-mounted-padding = 1
+
+[module/i3]
+type = internal/i3
+format = <label-state><label-mode>
+padding = 1
+wrapping-scroll = false
+
+; workspace names and icons
+strip-wsnumbers = false
+index-sort = true
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 10;10
+ws-icon-default = 
+format-underline = ${colors.line}
+
+label-mode = |%mode%|
+label-mode-padding = 0 
+label-mode-background = ${colors.background}
+label-mode-underline = ${colors.mid} 
+
+
+; focused = Active workspace on focused monitor
+label-focused = %icon%
+label-focused-background = ${colors.background-alt}
+label-focused-underline = ${colors.good}
+label-focused-padding = ${self.padding}
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %icon%
+label-unfocused-underline = ${colors.line}
+label-unfocused-padding = ${self.padding}
+
+; visible = Active workspace on unfocused monitor
+label-visible = %icon%
+label-visible-underline = ${colors.line}
+label-visible-padding = ${self.padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %icon%
+label-urgent-underline = ${colors.bad}
+label-urgent-padding = ${self.padding}
+
+; Separator in between workspaces
+label-separator = |
+label-separator-underline = ${colors.line}
+
+[module/xbacklight]
+type = internal/xbacklight
+format = <label><bar>
+format-underline = ${colors.casual}
+label = 
+label-underline = ${colors.good}
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = ${colors.background}
+bar-indicator-font = 2
+bar-indicator-underline = ${colors.bar}
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = ${colors.background}
+bar-fill-underline = ${colors.bar}
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.background}
+bar-empty-underline = ${colors.background}
+
+[module/network]
+type = internal/network 
+interface = wlp1s0 
+interval = 1.0
+label-connected = 
+label-disconnected = 
+format-connected-underline = ${colors.good}
+format-disconnected-underline = ${colors.bad}
+format-padding = 1
+
+[module/date]
+type = internal/date
+interval = 1
+date = "%Y.%m.%d"
+time = %H:%M:%S
+
+format-prefix-foreground = ${colors.foreground}
+format-underline = ${colors.casual}
+format-padding = 2
+label = %date% %time%
+
+[module/audio]
+type = internal/alsa
+; pulseaudio
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+master-soundcard = hw:0
+speaker-soundcard = hw:0
+headphone-soundcard = hw:0
+interval = 3
+
+; <label-volume>
+format-volume = <ramp-volume><bar-volume>
+label-volume =  
+label-volume-foreground = ${colors.foreground}
+master-mixer = Master
+headphone-mixer = Headphone
+
+headphone-id = 1
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = S
+ramp-headphones-0 = 
+ramp-headphones-underline = ${colors.good}
+
+format-muted = <label-muted><bar-volume>
+label-muted = 
+label-muted-foreground = ${colors.foreground}
+
+label-volume-underline = ${colors.good}
+label-muted-underline = ${colors.bad}
+
+bar-volume-width = 10
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-foreground = ${colors.background}
+bar-volume-indicator-underline = ${colors.bar}
+bar-volume-fill = ─
+bar-volume-fill-foreground = ${colors.background}
+bar-volume-fill-underline = ${colors.bar}
+bar-volume-empty = ─
+bar-volume-empty-foreground = ${colors.background}
+bar-volume-empty-underline = ${colors.line}
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ADP1
+full-at = 98
+
+label-discharging =  %percentage%%
+label-charging =  %percentage%% 
+label-full = 
+
+format-full = <label-full> 
+
+format-charging-underline = ${colors.mid}
+format-discharging-underline = ${colors.bad}
+format-full-underline = ${colors.good}
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+/usr/local/share/doc/polybar/config; vim:ft=dosini
