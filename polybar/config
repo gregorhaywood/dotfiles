@@ -194,8 +194,10 @@ bar-volume-empty-underline = ${colors.line}
 [module/battery]
 type = internal/battery
 battery = BAT1
-adapter = ADP1
-full-at = 98
+adapter = ADAD 
+
+full-at = 99
+poll = 1
 
 label-discharging =  %percentage%%
 label-charging =  %percentage%% 
