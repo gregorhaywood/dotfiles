@@ -82,11 +82,16 @@ function parse_dir_small {
 }
 
 export PS1="\`parse_dir_small\`\[\e[32m\]\`parse_git_branch\`\[\e[m\] $ "
+# Mark Ranger 
+if [ -n "$RANGER_LEVEL" ]; then export PS1="[Ranger]$PS1"; fi
+
 export PS2="...> "
 
 # Source local stuff
 if [ -f ~/.bash_local ]; then
         . ~/.bash_local 
 fi
+
+
 
 

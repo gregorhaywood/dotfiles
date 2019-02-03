@@ -3,8 +3,46 @@
 ! make the background transparent
 URxvt.transparent: true
 URxvt.shading: 20
-urxvt*blurRadius: 10
-urxvt*foreground: #ffffff
+*.blurRadius: 10
+
+*.foreground:   	#ffffff
+*.background:   	#000000
+*.highlightColor:	#222222
+
+! black
+*.color0:       #000000
+*.color8:       #000000
+
+! red
+*.color1:       #e91414
+*.color9:       #e91414 
+
+! green
+*.color2:       #0ed816
+*.color10:      #0ed816
+
+! yellow
+*.color3:       #dddd00
+*.color11:      #dddd00
+
+! blue
+*.color4:       #1928e3 
+*.color12:      #1928e3
+
+! magenta
+*.color5:       #fc22ca
+*.color13:      #fc22ca
+
+! cyan
+*.color6:       #00edd7
+*.color14:      #00edd7
+
+! white
+*.color7:       #ababab
+*.color15:      #f9f9f9
+
+
+
 
 ! Copy and paste 
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
@@ -22,6 +60,8 @@ URxvt.cursorUnderline: true
 
 
 ! Fonts
+URxvt*boldMode: true
+
 
 ! URxvt*letterSpace: -1
 ! URxvt*font: xft:Hack-Regular:size=10

@@ -1,10 +1,29 @@
 
 
+set autoindent
+set showcmd
 
-colo desert		" Colour Scheme
-" set number		" Inclunde line numbers
+" Appearance
 set cursorline		" Mark current line
-syntax enable           " enable syntax processing
+syntax on
+colorscheme default
+set t_Co=16		" 16 colours (xresources)
 
+" File specific stuff 
+filetype plugin on
+filetype indent on
+set ffs=unix		" Unix files
+set autoread  		" reload if written elsewhere 
+set noswapfile		" as I have other backups
+
+
+set showmatch		" match brackets
+
+" No bells
+set noerrorbells
+set novisualbell
+
+
+set foldcolumn=1	" left margin
 
 set mouse=v
