@@ -54,7 +54,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split, floating)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+Tab layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
@@ -138,7 +138,8 @@ set $i3 ~/.config/i3
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper
 exec_always --no-startup-id $i3/startup.sh
 
-
+# Keybindings
+bindsym $mod+e exec --no-startup-id mbsync auto
 
 
 

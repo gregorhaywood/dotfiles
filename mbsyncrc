@@ -1,57 +1,87 @@
+SyncState *
 
+
+IMAPAccount live
+Host outlook.office365.com
+User LIVE_ADDR
+PassCmd "gpg2 --decrypt --for-your-eyes-only --no-tty -q ~/Mail/.config/live.gpg"
+SSLType IMAPS
+SystemCertificates yes
+
+IMAPStore live-remote
+Account live
+
+MaildirStore live-local
+Path ~/Mail/Live/
+Inbox ~/Mail/Live/Inbox
+
+Channel live-inbox
+Master :live-remote:Inbox
+Slave :live-local:Inbox
+Create Slave
+Expunge Both
+
+Channel live-drafts
+Master :live-remote:Drafts
+Slave :live-local:Drafts
+Create Slave
+Expunge Both
+
+Channel live-sent
+Master :live-remote:Sent
+Slave :live-local:Sent
+Create Slave
+Expunge Both
+
+Channel live-junk
+Master :live-remote:Junk
+Slave :live-local:Spam 
+Create Slave
+Expunge Both
 
 IMAPAccount gmail
 Host imap.gmail.com 
 User GMAIL_ADDR 
-PassCmd "gpg2 --decrypt --for-your-eyes-only --no-tty -q Mail/gmail.gpg"
+PassCmd "gpg2 --decrypt --for-your-eyes-only --no-tty -q ~/Mail/.config/gmail.gpg"
 SSLType IMAPS 
 SystemCertificates yes
-
 
 IMAPStore gmail-remote
 Account gmail
 
-
 MaildirStore gmail-local
 Path ~/Mail/Gmail/
 Inbox ~/Mail/Gmail/Inbox
-
-
 
 Channel gmail-inbox
 Master :gmail-remote:INBOX
 Slave :gmail-local:Inbox
 Create Slave
 Expunge Both
-SyncState *
 
 Channel gmail-sent
 Master :gmail-remote:"[Gmail]/Sent Mail"
 Slave :gmail-local:Sent
 Create Slave
 Expunge Both
-SyncState *
 
 Channel gmail-draft
 Master :gmail-remote:"[Gmail]/Drafts"
 Slave :gmail-local:Drafts
 Create Slave
 Expunge Both
-SyncState *
 
 Channel gmail-spam
 Master :gmail-remote:"[Gmail]/Spam"
 Slave :gmail-local:Spam
 Create Slave
 Expunge Both
-SyncState *
 
 Channel gmail-trash
 Master :gmail-remote:"[Gmail]/Trash"
 Slave :gmail-local:Trash
 Create Slave
 Expunge Both
-SyncState *
 
 Group auto
 Channel gmail-inbox
@@ -59,4 +89,7 @@ Channel gmail-sent
 Channel gmail-draft
 Channel gmail-spam
 Channel gmail-trash
-
+Channel live-inbox
+Channel live-drafts
+Channel live-sent
+Channel live-junk

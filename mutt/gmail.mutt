@@ -1,0 +1,10 @@
+
+
+set from = GMAIL_ADDR
+set sendmail = "msmtp -a gmail
+
+set postponed = "+Gmail/Drafts"
+
+color status green default
+
+

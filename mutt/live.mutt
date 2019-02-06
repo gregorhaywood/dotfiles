@@ -1,0 +1,10 @@
+
+
+set from = LIVE_ADDR
+set sendmail = "msmtp -a live"
+
+set postponed = "+Live/Drafts"
+
+color status cyan default
+
+

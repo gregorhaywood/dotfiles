@@ -40,18 +40,23 @@ hdr_order from: to: cc: date: subject:  # and in this order
 
 
 # Default Inbox
-set spoolfile = "+Gmail/Inbox"
-mailboxes 	"+Gmail/Inbox" \
+set spoolfile = "+Inbox"
+mailboxes 	"+Inbox/Gmail" \
+		"+Gmail/Inbox" \
 		"+Gmail/Sent" \
 		"+Gmail/Drafts" \
 		"+Gmail/Trash" \
-		"+Gmail/Spam"
-
+		"+Gmail/Spam" \
+		"+Live/Inbox" \
+		"+Live/Spam" \
+		"+Live/Sent" \
+		"+Live/Drafts" \
 ###############
 
 # default sender
-folder-hook Gmail/* source ~/.config/local/gmail.muttrc
-
+folder-hook Gmail/* source ~/Mail/.config/gmail.mutt
+folder-hook Live/* source ~/Mail/.config/live.mutt
+folder-hook Uni/* source ~/Mail/.config/uni.mutt
 
 ####
 # Account Settings 
