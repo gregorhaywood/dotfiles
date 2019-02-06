@@ -41,7 +41,7 @@ hdr_order from: to: cc: date: subject:  # and in this order
 
 # Default Inbox
 set spoolfile = "+Gmail/Inbox"
-mailboxes	+Gmail/Inbox" \
+mailboxes	"+Gmail/Inbox" \
 		"+Gmail/Sent" \
 		"+Gmail/Drafts" \
 		"+Gmail/Trash" \
