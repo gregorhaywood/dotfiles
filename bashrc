@@ -17,6 +17,14 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+# GPG
+GPG_TTY=$(tty)
+export GPG_TTY
+
+# assumed config dir
+export XDG_CONFIG_HOME="$HOME/.config"
+
+
 # Universal Aliases 
 alias python=python3
 alias py=python

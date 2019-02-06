@@ -14,7 +14,7 @@ filetype plugin on
 filetype indent on
 set ffs=unix		" Unix files
 set autoread  		" reload if written elsewhere 
-set noswapfile		" as I have other backups
+" set noswapfile		" as I have other backups
 
 
 set showmatch		" match brackets
@@ -24,6 +24,5 @@ set noerrorbells
 set novisualbell
 
 
-set foldcolumn=1	" left margin
 
 set mouse=v

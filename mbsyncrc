@@ -1,0 +1,62 @@
+
+
+IMAPAccount gmail
+Host imap.gmail.com 
+User GMAIL_ADDR 
+PassCmd "gpg2 --decrypt --for-your-eyes-only --no-tty -q Mail/gmail.gpg"
+SSLType IMAPS 
+SystemCertificates yes
+
+
+IMAPStore gmail-remote
+Account gmail
+
+
+MaildirStore gmail-local
+Path ~/Mail/Gmail/
+Inbox ~/Mail/Gmail/Inbox
+
+
+
+Channel gmail-inbox
+Master :gmail-remote:INBOX
+Slave :gmail-local:Inbox
+Create Slave
+Expunge Both
+SyncState *
+
+Channel gmail-sent
+Master :gmail-remote:"[Gmail]/Sent Mail"
+Slave :gmail-local:Sent
+Create Slave
+Expunge Both
+SyncState *
+
+Channel gmail-draft
+Master :gmail-remote:"[Gmail]/Drafts"
+Slave :gmail-local:Drafts
+Create Slave
+Expunge Both
+SyncState *
+
+Channel gmail-spam
+Master :gmail-remote:"[Gmail]/Spam"
+Slave :gmail-local:Spam
+Create Slave
+Expunge Both
+SyncState *
+
+Channel gmail-trash
+Master :gmail-remote:"[Gmail]/Trash"
+Slave :gmail-local:Trash
+Create Slave
+Expunge Both
+SyncState *
+
+Group auto
+Channel gmail-inbox
+Channel gmail-sent
+Channel gmail-draft
+Channel gmail-spam
+Channel gmail-trash
+
