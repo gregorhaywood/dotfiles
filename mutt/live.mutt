@@ -6,5 +6,5 @@ set sendmail = "msmtp -a live"
 set postponed = "+Live/Drafts"
 
 color status cyan default
-
-
+color sidebar_divider cyan default
+color sidebar_indicator cyan default 

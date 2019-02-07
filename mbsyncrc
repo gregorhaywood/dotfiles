@@ -13,11 +13,11 @@ Account live
 
 MaildirStore live-local
 Path ~/Mail/Live/
-Inbox ~/Mail/Live/Inbox
+Inbox ~/Mail/Live
 
 Channel live-inbox
 Master :live-remote:Inbox
-Slave :live-local:Inbox
+Slave :live-local:
 Create Slave
 Expunge Both
 
@@ -51,11 +51,11 @@ Account gmail
 
 MaildirStore gmail-local
 Path ~/Mail/Gmail/
-Inbox ~/Mail/Gmail/Inbox
+Inbox ~/Mail/Gmail
 
 Channel gmail-inbox
 Master :gmail-remote:INBOX
-Slave :gmail-local:Inbox
+Slave :gmail-local:
 Create Slave
 Expunge Both
 

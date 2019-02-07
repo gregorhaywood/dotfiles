@@ -22,15 +22,12 @@ unset beep_new           # no bell on new mails
 set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 
-# Sidebar Patch --------------------------------------
-# set sidebar_delim   = '  │'
-set sidebar_visible = yes
-set sidebar_width   = 24
-# color sidebar_new color221 color233
-
 # Status Bar -----------------------------------------
 set status_chars  = " *%A"
-set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)? %?d? (%d to delete) ]───%>──%?p?( %p postponed )?─── $my_akr ───""
+
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)? ]───%>─"
+
 
 # Header Options -------------------------------------
 ignore *                                # ignore all headers
@@ -40,16 +37,14 @@ hdr_order from: to: cc: date: subject:  # and in this order
 
 
 # Default Inbox
-set spoolfile = "+Gmail/Inbox"
-mailboxes	"+Gmail/Inbox" \
-		"+Gmail/Sent" \
+set spoolfile = "+Gmail"
+mailboxes	"+Gmail" "+Gmail/Sent" \
 		"+Gmail/Drafts" \
 		"+Gmail/Trash" \
 		"+Gmail/Spam" \
-		"+Live/Inbox" \
-		"+Live/Spam" \
-		"+Live/Sent" \
+		"+Live" "+Live/Sent" \
 		"+Live/Drafts" \
+		"+Live/Spam" \
 ###############
 
 # default sender
@@ -64,9 +59,34 @@ folder-hook Uni/* source ~/Mail/.config/uni.mutt
 # set sendmail = "msmtp -a <account>
 # set postponed = <drafts>
 # color status <color> default
-#
+# color sidebar_divider  <color>  default
 # ####
 
-# TODO
-# more colour configurations
+
+# Sidebar Patch --------------------------------------
+set sidebar_visible = yes
+set sidebar_width   = 24
+set sidebar_divider_char = '│'
+
+# Mailbox Format
+set mail_check_stats
+set sidebar_format = "%B%* %?N?%N/?%S"
+
+
+set sidebar_short_path
+set sidebar_delim_chars="/"
+set sidebar_folder_indent
+
+set sidebar_indent_string="|__"
+
+# Change Maildir
+macro index,pager <Right> <sidebar-next><sidebar-open>
+macro index,pager <Left> <sidebar-prev><sidebar-open>
+
+# Inbox Shortcuts
+macro index,pager g <change-folder>=Gmail<enter>
+macro index,pager l <change-folder>=Live<enter>
+# academic
+macro index,pager a <change-folder>=Uni<enter>
+
 
