@@ -52,6 +52,8 @@ folder-hook Gmail/* source ~/Mail/.config/gmail.mutt
 folder-hook Live/* source ~/Mail/.config/live.mutt
 folder-hook Uni/* source ~/Mail/.config/uni.mutt
 
+set realname="Gregor"
+
 ####
 # Account Settings 
 #

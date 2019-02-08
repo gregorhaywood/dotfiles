@@ -4,6 +4,9 @@ Dotfiles. You know the deal.
 
 Unless I say otherwise, dotfiles go in $HOME and directories go in $HOME/.config. This should be done with symlinks.
 
+Where possible, access should be through scripts in the script directory (for maintainability). For simplicity, i3 assumes the scripts are located in ~/dotfiles/scripts.
+
+
 ## Active WIP
 Dunst 
 i3 Autolaunch Stuff

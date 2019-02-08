@@ -139,7 +139,7 @@ exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper
 exec_always --no-startup-id $i3/startup.sh
 
 # Keybindings
-bindsym $mod+e exec --no-startup-id mbsync auto
+bindsym $mod+e exec --no-startup-id ~/dotfiles/scripts/email.sh 
 
 
 
