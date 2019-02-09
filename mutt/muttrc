@@ -1,12 +1,16 @@
 # Paths ----------------------------------------------
 set folder           = ~/Mail               # mailbox location
-# set alias_file       = ~/.mutt/alias         # where to store aliases
+set alias_file       = ~/Mail/aliases         # where to store aliases
 set header_cache     = ~/.mutt/cache/headers # where to store headers
 set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
 set certificate_file = ~/.mutt/certificates  # where to store certs
 # set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
 set tmpdir           = /tmp          # where to keep temp files
 # set signature        = ~/.mutt/sig           # my signature file
+
+# Source aliases
+source $alias_file
+
 
 # Basic Options --------------------------------------
 set wait_key = no        # shut up, mutt
@@ -24,8 +28,6 @@ set thorough_search      # strip headers and eval mimes before searching
 
 # Status Bar -----------------------------------------
 set status_chars  = " *%A"
-set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)? %?d? (%d to delete) ]───%>──%?p?( %p postponed )?─── $my_akr ───""
-
 set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)? ]───%>─"
 
 
@@ -45,7 +47,15 @@ mailboxes	"+Gmail" "+Gmail/Sent" \
 		"+Live" "+Live/Sent" \
 		"+Live/Drafts" \
 		"+Live/Spam" \
+		"+Uni" "+Uni/Sent" \
+		"+Uni/Drafts" \
+		"+Uni/Junk" \
 ###############
+
+set reverse_alias=yes
+
+
+
 
 # default sender
 folder-hook Gmail/* source ~/Mail/.config/gmail.mutt
@@ -74,7 +84,6 @@ set sidebar_divider_char = '│'
 set mail_check_stats
 set sidebar_format = "%B%* %?N?%N/?%S"
 
-
 set sidebar_short_path
 set sidebar_delim_chars="/"
 set sidebar_folder_indent
@@ -90,5 +99,9 @@ macro index,pager g <change-folder>=Gmail<enter>
 macro index,pager l <change-folder>=Live<enter>
 # academic
 macro index,pager a <change-folder>=Uni<enter>
+
+# Add alia
+bind pager \Ca create-alias
+
 
 

@@ -1,4 +1,7 @@
 
+# send straight to users
+set hostname = st-andrews.ac.uk
+
 
 set from = UNI_ADDR
 set sendmail = "msmtp -a uni"
@@ -8,3 +11,4 @@ set postponed = "+Uni/Drafts"
 color status yellow default
 color sidebar_divider yellow default
 color sidebar_indicator yellow default 
+color indicator yellow default

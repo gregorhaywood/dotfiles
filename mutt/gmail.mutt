@@ -8,5 +8,5 @@ set postponed = "+Gmail/Drafts"
 color status green default
 color sidebar_divider green default
 color sidebar_indicator green default 
-
+color indicator green default
 

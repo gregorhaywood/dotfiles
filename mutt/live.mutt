@@ -8,3 +8,5 @@ set postponed = "+Live/Drafts"
 color status cyan default
 color sidebar_divider cyan default
 color sidebar_indicator cyan default 
+color indicator cyan default
+
