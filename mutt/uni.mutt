@@ -6,7 +6,9 @@ set hostname = st-andrews.ac.uk
 set from = UNI_ADDR
 set sendmail = "msmtp -a uni"
 
+
 set postponed = "+Uni/Drafts"
+set record = "+Uni/Sent"
 
 color status yellow default
 color sidebar_divider yellow default

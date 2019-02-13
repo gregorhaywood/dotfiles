@@ -20,23 +20,53 @@ Slave :uni-local:
 Create Slave
 Expunge Both
 
+Channel uni-sh
+Master :uni-remote:Inbox/SH
+Slave :uni-local:SH
+Create Slave
+Expunge Both
+
+Channel uni-church
+Master :uni-remote:Inbox/Church
+Slave :uni-local:Church
+Create Slave
+Expunge Both
+
+Channel uni-admin
+Master :uni-remote:Inbox/Admin
+Slave :uni-local:Admin
+Create Slave
+Expunge Both
+
+Channel uni-clutter
+Master :uni-remote:Clutter
+Slave :uni-local:Clutter
+Create Slave
+Expunge Both
+
+Channel uni-cw
+Master :uni-remote:Inbox/Practicals
+Slave :uni-local:CW
+Create Slave
+Expunge Both
+
 Channel uni-sent
 Master :uni-remote:"Sent Items"
 Slave :uni-local:Sent
 Create Slave
-# Expunge Both
+Expunge Both
 
 Channel uni-drafts
 Master :uni-remote:Drafts
 Slave :uni-local:Drafts
 Create Slave
-# Expunge Both
+Expunge Both
 
 Channel uni-spam
 Master :uni-remote:"Junk Email"
 Slave :uni-local:Junk
 Create Slave
-# Expunge Both
+Expunge Both
 
 
 
@@ -138,3 +168,8 @@ Channel uni-inbox
 Channel uni-drafts
 Channel uni-sent
 Channel uni-spam
+Channel uni-cw
+Channel uni-church
+Channel uni-sh
+Channel uni-admin
+Channel uni-clutter

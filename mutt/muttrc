@@ -12,6 +12,10 @@ set tmpdir           = /tmp          # where to keep temp files
 source $alias_file
 
 
+alternative_order text/plain text/enriched text/html
+auto_view text/html
+
+
 # Basic Options --------------------------------------
 set wait_key = no        # shut up, mutt
 set mbox_type = Maildir  # mailbox type
@@ -44,16 +48,23 @@ mailboxes	"+Gmail" "+Gmail/Sent" \
 		"+Gmail/Drafts" \
 		"+Gmail/Trash" \
 		"+Gmail/Spam" \
-		"+Live" "+Live/Sent" \
+		"+Live"  "+Live/Sent" \
 		"+Live/Drafts" \
 		"+Live/Spam" \
-		"+Uni" "+Uni/Sent" \
-		"+Uni/Drafts" \
+		"+Uni" "+Uni/SH" \
+		"+Uni/CW" \
+		"+Uni/Church" \
+		"+Uni/Admin" \
+		"+Uni/Clutter" \
+		"+Uni/Sent" "+Uni/Drafts" \
 		"+Uni/Junk" \
 ###############
 
 set reverse_alias=yes
 
+
+bind pager <Down> half-down
+bind pager <Up> half-up
 
 
 
@@ -91,8 +102,9 @@ set sidebar_folder_indent
 set sidebar_indent_string="|__"
 
 # Change Maildir
-macro index,pager <Right> <sidebar-next><sidebar-open>
-macro index,pager <Left> <sidebar-prev><sidebar-open>
+macro index,pager <Right> <sidebar-next>
+macro index,pager <Left> <sidebar-prev>
+macro index,pager / <sidebar-open>
 
 # Inbox Shortcuts
 macro index,pager g <change-folder>=Gmail<enter>

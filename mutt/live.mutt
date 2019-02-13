@@ -4,6 +4,9 @@ set from = LIVE_ADDR
 set sendmail = "msmtp -a live"
 
 set postponed = "+Live/Drafts"
+set record = "+Live/Sent"
+
+
 
 color status cyan default
 color sidebar_divider cyan default

@@ -4,6 +4,7 @@ set from = GMAIL_ADDR
 set sendmail = "msmtp -a gmail
 
 set postponed = "+Gmail/Drafts"
+set record = "+Gmail/Sent"
 
 color status green default
 color sidebar_divider green default
