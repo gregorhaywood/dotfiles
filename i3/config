@@ -20,7 +20,7 @@ font xft: FontAwesome-Solid:size=10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id $TERMINAL
+bindsym $mod+Return exec --no-startup-id ~/dotfiles/scripts/terminal.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
