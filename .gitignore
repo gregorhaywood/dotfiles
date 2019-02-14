@@ -3,7 +3,11 @@
 # Ignore
 .vim/.netrwhist
 
+ranger/history 
+ranger/bookmarks
 
+
+$/history
 
 
 
