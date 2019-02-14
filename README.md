@@ -14,6 +14,11 @@ Vim
 Build script (include vim plugins and other symlinks?)
 
 
+## Dependancies
+### xcwd
+This is used to open terminals in the focused terminal's directory. It is availible here: https://github.com/schischi/xcwd
+
+
 
 ## Email
 There's a lot going on here.
