@@ -1,5 +1,17 @@
 
 
+" For vim, ln to ~/.vimrc
+" For neovim, ln to ~/.config/nvim/init.vim
+
+if has('nvim')
+	
+endif
+
+
+set rtp^=~/.vim/
+set guicursor=a:hor100-blinkon0
+
+
 set autoindent
 set showcmd
 
