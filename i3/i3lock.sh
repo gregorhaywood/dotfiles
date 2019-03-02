@@ -32,6 +32,12 @@ case "$1" in
 	xautolock -enable
 	notify-send "Autolock Enabled"
 	;;
+    shutdown)
+        systemctl shutdown now
+        ;;
+    logout)
+        i3-msg exit
+        ;;
     *)
         echo "Usage: $0 {lock|suspend|hibernate}"
         exit 2

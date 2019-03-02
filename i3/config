@@ -1,6 +1,7 @@
 # i3 config file (v4)
 set $mod Mod4
 
+
 # Volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ +3% && killall -SIGUSR1 i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume @DEFAULT_SINK@ -3% && killall -SIGUSR1 i3status
@@ -9,6 +10,8 @@ bindsym XF86AudioMute        exec --no-startup-id pactl -- set-sink-mute @DEFAUL
 # Brightness
 bindsym XF86MonBrightnessUp exec   --no-startup-id xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
+bindsym $mod+XF86MonBrightnessUp exec   --no-startup-id xbacklight -inc 1 # increase screen brightness
+bindsym $mod+XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 1 # decrease screen brightness
 
 # Font
 font xft: FantasqueSansMono-Regular:size=12

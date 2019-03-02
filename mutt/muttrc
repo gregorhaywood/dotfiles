@@ -46,7 +46,6 @@ hdr_order from: to: cc: date: subject:  # and in this order
 set spoolfile = "+Gmail"
 mailboxes	"+Gmail" "+Gmail/Sent" \
 		"+Gmail/Drafts" \
-		"+Gmail/Trash" \
 		"+Gmail/Spam" \
 		"+Live"  "+Live/Sent" \
 		"+Live/Drafts" \

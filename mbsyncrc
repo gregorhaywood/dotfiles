@@ -148,12 +148,6 @@ Slave :gmail-local:Spam
 Create Slave
 Expunge Both
 
-Channel gmail-trash
-Master :gmail-remote:"[Gmail]/Trash"
-Slave :gmail-local:Trash
-Create Slave
-Expunge Both
-
 Group auto
 Channel gmail-inbox
 Channel gmail-sent
