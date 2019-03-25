@@ -47,6 +47,9 @@ URxvt.shading: 20
 ! Copy and paste 
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.iso14755:	false
+URxvt.iso14755_52: false
+
 
 ! Scrolling
 URxvt*skipScroll:  true

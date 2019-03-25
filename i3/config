@@ -132,9 +132,11 @@ bindsym $mod+p exec --no-startup-id $i3/i3lock.sh on
 
 
 # i3 gaps 
-for_window [class="^.*"] border pixel 0
-gaps inner 10
-gaps outer 0
+# for_window [class="^.*"] border pixel 0
+# gaps inner 10
+# gaps outer 0
+
+
 
 # Startup applications
 set $i3 ~/.config/i3

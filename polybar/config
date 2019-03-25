@@ -17,22 +17,22 @@ bar = ${self.casual}
 monitor = eDP-1
 bottom = false
 width = 100%
-height = 22
+height = 28
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 2
+line-size = 4
 padding = 0
 module-margin = 0
 
 ; fonts
-font-0 = FantasqueSansMono-Regular:size=10;0
-font-1 = FantasqueSansMono-Bold:size=10;0
-font-2 = FantasqueSansMono-Italic:size=10;0
-font-3 = FontAwesome-Regular:size=10
-font-4 = FontAwesome-Brands:size=10
-font-5 = FontAwesome-Solid:size=10
+font-0 = FantasqueSansMono-Regular:size=12;0
+font-1 = FantasqueSansMono-Bold:size=12;0
+font-2 = FantasqueSansMono-Italic:size=12;0
+font-3 = FontAwesome-Regular:size=12
+font-4 = FontAwesome-Brands:size=12
+font-5 = FontAwesome-Solid:size=12
 
 modules-left = i3 xwindow 
 modules-right = network filesystem xbacklight audio battery date 
@@ -130,7 +130,7 @@ bar-empty-underline = ${colors.background}
 
 [module/network]
 type = internal/network 
-interface = wlp1s0 
+interface = wlo1
 interval = 1.0
 label-connected = 
 label-disconnected = 
@@ -193,10 +193,9 @@ bar-volume-empty-underline = ${colors.line}
 
 [module/battery]
 type = internal/battery
-battery = BAT1
-adapter = ADAD 
+battery = BAT0
 
-full-at = 99
+full-at = 95
 poll = 1
 
 label-discharging =  %percentage%%
