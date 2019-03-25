@@ -54,7 +54,15 @@ Polygot
 Suround.vim
 
 
+# TODO
+https://wiki.archlinux.org/index.php/backlight
+Set up backlight adjusting
+Set up volume control
+Set up ssh stuff
 
+Locking
+Hibernating
+Email
 
 
 

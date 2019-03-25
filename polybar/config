@@ -35,7 +35,7 @@ font-4 = FontAwesome-Brands:size=12
 font-5 = FontAwesome-Solid:size=12
 
 modules-left = i3 xwindow 
-modules-right = network filesystem xbacklight audio battery date 
+modules-right = network filesystem backlight audio battery date 
 
 [module/xwindow]
 type = internal/xwindow
@@ -107,8 +107,9 @@ label-urgent-padding = ${self.padding}
 label-separator = |
 label-separator-underline = ${colors.line}
 
-[module/xbacklight]
-type = internal/xbacklight
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
 format = <label><bar>
 format-underline = ${colors.casual}
 label = 
