@@ -25,8 +25,8 @@ font xft: FontAwesome-Solid:size=10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return $exec  urxvt
-# bindsym $mod+Return $exec ~/dotfiles/scripts/terminal.sh
+#bindsym $mod+Return $exec  urxvt
+bindsym $mod+Return $exec $scripts/terminal.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill

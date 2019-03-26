@@ -1,7 +1,7 @@
 
 
 # Ignore
-.vim/.netrwhist
+vim/.netrwhist
 
 ranger/history 
 ranger/bookmarks
