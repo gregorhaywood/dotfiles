@@ -1,17 +1,15 @@
 #! /bin/sh
 
 lock() {
-	scrot /tmp/screen_locked.png
-	convert /tmp/screen_locked.png -scale 10% -scale 1000% /tmp/screen_locked.png
-	i3lock -i /tmp/screen_locked.png
+ 	~/dotfiles/i3/bar.sh  
 }
 
 case "$1" in
     lock)
         lock
-        ;;
+    	;;
     suspend)
-        lock && systemctl suspend
+      	lock && systemctl suspend
         ;;
     hibernate)
         lock && systemctl hibernate
@@ -24,22 +22,8 @@ case "$1" in
 	xautolock -enable
 	notify-send "Autolock Enabled"
 	;;
-    off)
-	xautolock -disable
-	notify-send "Autolock Disabled"
-	;;
-    on)
-	xautolock -enable
-	notify-send "Autolock Enabled"
-	;;
-    shutdown)
-        systemctl shutdown now
-        ;;
-    logout)
-        i3-msg exit
-        ;;
     *)
-        echo "Usage: $0 {lock|suspend|hibernate}"
+        echo "Usage: $0 {lock|suspend|hibernate|off|on}"
         exit 2
 esac
 
