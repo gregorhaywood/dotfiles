@@ -17,12 +17,26 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# GPG
-GPG_TTY=$(tty)
-export GPG_TTY
+if [ -f ~/.ssh/agent.env ] ; then
+    . ~/.ssh/agent.env > /dev/null
+    if ! kill -0 $SSH_AGENT_PID > /dev/null 2>&1; then
+        echo "Stale agent file found. Spawning new agent? "
+        eval `ssh-agent | tee ~/.ssh/agent.env`
+        ssh-add
+    fi
+else
+    echo "Starting ssh-agent"
+    eval `ssh-agent | tee ~/.ssh/agent.env`
+    ssh-add
+fi
 
 # assumed config dir
 export XDG_CONFIG_HOME="$HOME/.config"
+
+# GPG
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
 
 
 # Universal Aliases 
@@ -36,6 +50,9 @@ alias la='ls -la'
 export EDITOR=vi
 export TERMINAL=urxvt
 export SHELL=/bin/bash
+
+
+
 
 # Bash Prompt
 # get current branch in git repo
