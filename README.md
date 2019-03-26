@@ -39,10 +39,6 @@ Msmtp can be used to queue emails to send later. This is good for offline use: q
 
 ### Mutt
 Here is your email client. It uses folder-hook to select an account given a current maildir. This should be able to switch between sending accounts easily, but I've not set up and tested it. 
-
-### Notmuch
-I've not set this up, but this could be used for seraching emails if necessary. 
-
 TODO
 msmtp has a queuing system. Work out ho'sw to use this with cron for scheduling offline sending.
 add other accounts
@@ -55,10 +51,7 @@ Suround.vim
 
 
 # TODO
-https://wiki.archlinux.org/index.php/backlight
-Set up backlight adjusting
-Set up volume control
-Set up ssh stuff
+Volume stuff mostly works. There are still problems with connecting headphones
 
 Locking
 Hibernating

@@ -174,7 +174,7 @@ ramp-headphones-0 = 
 ramp-headphones-underline = ${colors.good}
 
 format-muted = <label-muted><bar-volume>
-label-muted = 
+label-muted = M
 label-muted-foreground = ${colors.foreground}
 
 label-volume-underline = ${colors.good}

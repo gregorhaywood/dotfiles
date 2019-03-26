@@ -71,9 +71,9 @@ URxvt*boldMode: true
 ! URxvt*boldFont: xft:Hack-Bold:size=10
 ! URxvt*italicFont: xft:Hack-Italic:size=10
 
-URxvt*font: xft:FantasqueSansMono-Regular:size=12
-URxvt*boldFont: xft:FantasqueSansMono-Bold:size=12
-URxvt*italicFont: xft:FantasqueSansMono-Italic:size=12
+URxvt*font: xft:FantasqueSansMono-Regular:size=14
+URxvt*boldFont: xft:FantasqueSansMono-Bold:size=14
+URxvt*italicFont: xft:FantasqueSansMono-Italic:size=14
 
 
 

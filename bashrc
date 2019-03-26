@@ -43,11 +43,13 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 alias python=python3
 alias py=python
 alias pip='python3 -m pip'
-alias venv='. venv/bin/activate'                                                                                                                
+alias venv='. venv/bin/activate'
+alias vim='nvim'
 alias la='ls -la'                                                                                                                                    
 
 # Vars 
-export EDITOR=vi
+export EDITOR=nvim
+export VISUAL=$EDITOR
 export TERMINAL=urxvt
 export SHELL=/bin/bash
 
