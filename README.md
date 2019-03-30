@@ -51,12 +51,11 @@ Suround.vim
 
 
 # TODO
-Volume stuff mostly works. There are still problems with connecting headphones
-
-Locking
 Hibernating
 Email
 
+newsboat:
+set this all up
 
 
 

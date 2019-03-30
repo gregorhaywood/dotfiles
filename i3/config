@@ -109,10 +109,10 @@ bindsym $mod+Shift+r restart
 # resize window 
 bindsym $mod+r mode "resize"
 mode "resize" {
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px
+        bindsym Down resize grow height 5 px
+        bindsym Up resize shrink height 5 px
+        bindsym Right resize grow width 5 px
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -126,8 +126,6 @@ bindsym $mod+Control+l $exec $i3/i3lock.sh suspend
 bindsym $mod+Control+Shift+l $exec $i3/i3lock.sh suspend
 # bindsym $mod+Control+Shift+l $exec $i3/i3lock.sh hibernate
 
-bindsym $mod+o $exec $i3/i3lock.sh off
-bindsym $mod+p $exec $i3/i3lock.sh on
 
 
 # i3 gaps 
@@ -137,13 +135,12 @@ for_window [class="^.*"] border pixel 1
 
 
 # Startup applications
-exec_always --no-startup-id feh --bg-scale ~/artemis/wallpaper
-exec_always --no-startup-id $i3/startup.sh
-
+exec_always --no-startup-id $scripts/psTree.sh
+exec polybar
 
 # Keybindings
-bindsym $mod+e $exec ~/dotfiles/scripts/email.sh 
-
+bindsym $mod+e $exec $scripts/email.sh 
+bindsym $mod+p $exec $scripts/psTree.sh
 
 
 

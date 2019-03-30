@@ -1,5 +1,13 @@
 
 
+## Other git repositories used
+# Vim Pluggs (in /vim/plugged)
+lightline.vim  
+vim-commentary  
+vim-polyglot
+
+
+
 # Ignore
 vim/.netrwhist
 
@@ -7,7 +15,6 @@ ranger/history
 ranger/bookmarks
 
 
-$/history
 
 
 

@@ -14,16 +14,8 @@ case "$1" in
     hibernate)
         lock && systemctl hibernate
         ;;
-    off)
-	xautolock -disable
-	notify-send "Autolock Disabled"
-	;;
-    on)
-	xautolock -enable
-	notify-send "Autolock Enabled"
-	;;
     *)
-        echo "Usage: $0 {lock|suspend|hibernate|off|on}"
+        echo "Usage: $0 {lock|suspend|hibernate}"
         exit 2
 esac
 

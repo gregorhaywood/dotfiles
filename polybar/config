@@ -7,7 +7,7 @@ line = #1a1a1a
 mid = #ff0
 bad =  #f00
 good =  #0f0
-casual = #1ad1ff
+casual = #0f0
 bar = ${self.casual}
 
 
@@ -152,9 +152,7 @@ label = %date% %time%
 
 [module/audio]
 type = internal/alsa
-; pulseaudio
-sink = alsa_output.pci-0000_00_1b.0.analog-stereo
-master-soundcard = hw:0
+master-soundcard = default 
 speaker-soundcard = hw:0
 headphone-soundcard = hw:0
 interval = 3
@@ -164,9 +162,11 @@ format-volume = <ramp-volume><bar-volume>
 label-volume =  
 label-volume-foreground = ${colors.foreground}
 master-mixer = Master
-headphone-mixer = Headphone
+; headphone-mixer = Headphone
+; speaker-mixer = Master
+; Speaker
 
-headphone-id = 1
+; headphone-id = 1
 
 ; Only applies if <ramp-volume> is used
 ramp-volume-0 = S
@@ -177,7 +177,7 @@ format-muted = <label-muted><bar-volume>
 label-muted = M
 label-muted-foreground = ${colors.foreground}
 
-label-volume-underline = ${colors.good}
+ramp-volume-underline = ${colors.good}
 label-muted-underline = ${colors.bad}
 
 bar-volume-width = 10
@@ -195,6 +195,7 @@ bar-volume-empty-underline = ${colors.line}
 [module/battery]
 type = internal/battery
 battery = BAT0
+adapter = AC
 
 full-at = 95
 poll = 1
