@@ -50,3 +50,4 @@ command M call MAKE()
 
 
 
+autocmd BufRead,BufNewFile *TODO set ft=markdown
