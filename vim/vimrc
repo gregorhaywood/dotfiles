@@ -10,6 +10,9 @@ Plug 'tpope/vim-commentary'
 call plug#end()
 
 
+let g:tex_flavor = "latex"
+
+
 set guicursor=a:hor100
 
 
