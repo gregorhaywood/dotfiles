@@ -20,6 +20,8 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 set showcmd
+set swapfile
+
 
 " Appearance
 syntax on

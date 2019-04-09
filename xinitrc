@@ -4,6 +4,5 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 setxkbmap -layout "gb"
 xset b off
-unclutter --timeout 1 -b
-dunst
+xset s 0 0
 exec i3

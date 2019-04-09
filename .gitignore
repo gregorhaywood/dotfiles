@@ -1,11 +1,6 @@
 
 
-## Other git repositories used
-# Vim Pluggs (in /vim/plugged)
-lightline.vim  
-vim-commentary  
-vim-polyglot
-vim-markdown
+vim/plugged/*
 
 
 # Ignore

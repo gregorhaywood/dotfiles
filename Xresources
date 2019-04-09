@@ -64,14 +64,10 @@ URxvt.cursorUnderline: true
 
 ! Fonts
 URxvt*boldMode: true
-
-
+! URxvt.letterSpace: 1
 ! URxvt*letterSpace: -1
-! URxvt*font: xft:Hack-Regular:size=10
-! URxvt*boldFont: xft:Hack-Bold:size=10
-! URxvt*italicFont: xft:Hack-Italic:size=10
 
-URxvt*font: xft:FantasqueSansMono-Regular:size=14
+URxvt*font: xft:FantasqueSansMono-Regular:size=14,xft:SourceCodePro-Regular:size=14
 URxvt*boldFont: xft:FantasqueSansMono-Bold:size=14
 URxvt*italicFont: xft:FantasqueSansMono-Italic:size=14
 

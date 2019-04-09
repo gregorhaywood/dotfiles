@@ -153,7 +153,6 @@ Channel gmail-inbox
 Channel gmail-sent
 Channel gmail-draft
 Channel gmail-spam
-Channel gmail-trash
 Channel live-inbox
 Channel live-drafts
 Channel live-sent

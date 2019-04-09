@@ -9,10 +9,10 @@ case "$1" in
         lock
     	;;
     suspend)
-      	lock && systemctl suspend
+      	lock && sleep 1; systemctl suspend
         ;;
     hibernate)
-        lock && systemctl hibernate
+        lock && sleep 1; systemctl hibernate
         ;;
     *)
         echo "Usage: $0 {lock|suspend|hibernate}"
