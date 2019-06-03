@@ -35,4 +35,4 @@ pscircle \
 	--toplists-bar-color=BBBBBB \
 	--toplists-font-size=12 
 
-feh --bg-scale /tmp/wallpaper
+# feh --bg-scale /tmp/wallpaper

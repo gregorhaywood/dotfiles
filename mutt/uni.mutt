@@ -6,9 +6,19 @@ set hostname = st-andrews.ac.uk
 set from = UNI_ADDR
 set sendmail = "msmtp -a uni"
 
-
+# set folder = "~/Mail/Uni"
 set postponed = "+Uni/Drafts"
 set record = "+Uni/Sent"
+
+save-hook . ='Uni/'
+
+# mailboxes	"+" "+SH" \
+# 		"+CW" \
+# 		"+Church" \
+# 		"+Admin" \
+# 		"+Clutter" \
+# 		"+Sent" "+Drafts" \
+#		"+Junk" \
 
 color status yellow default
 color sidebar_divider yellow default

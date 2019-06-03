@@ -1,11 +1,14 @@
 
+# config
 
 set from = LIVE_ADDR
 set sendmail = "msmtp -a live"
 
+# set folder = "~/Mail/Live"
 set postponed = "+Live/Drafts"
 set record = "+Live/Sent"
-
+# mailboxes = "+" "+Sent"
+save-hook . ='Live/'
 
 
 color status cyan default

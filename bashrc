@@ -21,9 +21,6 @@ fi
 # assumed config dir
 export XDG_CONFIG_HOME="$HOME/.config"
 
-# GPG
-export GPG_TTY=$(tty)
-gpg-connect-agent updatestartuptty /bye >/dev/null
 
 
 
@@ -35,6 +32,10 @@ alias venv='. venv/bin/activate'
 alias vim='nvim'
 alias la='ls -la'                                                                                                                                    
 alias mutt='neomutt'
+
+alias day='redshift -P -O 6500'
+alias night='redshift -P -O 3700'
+
 
 # Vars 
 export EDITOR=nvim

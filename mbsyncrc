@@ -26,6 +26,12 @@ Slave :uni-local:SH
 Create Slave
 Expunge Both
 
+Channel uni-shire
+Master :uni-remote:Inbox/Shire
+Slave :uni-local:Shire
+Create Slave
+Expunge Both
+
 Channel uni-church
 Master :uni-remote:Inbox/Church
 Slave :uni-local:Church
@@ -41,6 +47,18 @@ Expunge Both
 Channel uni-clutter
 Master :uni-remote:Clutter
 Slave :uni-local:Clutter
+Create Slave
+Expunge Both
+
+Channel uni-shire
+Master :uni-remote:Inbox/Shire
+Slave :uni-local:Shire
+Create Slave
+Expunge Both
+
+Channel uni-wk
+Master :uni-remote:Inbox/Work
+Slave :uni-local:Work
 Create Slave
 Expunge Both
 
@@ -89,6 +107,18 @@ Inbox ~/Mail/Live
 Channel live-inbox
 Master :live-remote:Inbox
 Slave :live-local:
+Create Slave
+Expunge Both
+
+Channel live-su
+Master :live-remote:SU
+Slave :live-local:SU
+Create Slave
+Expunge Both
+
+Channel live-inbox
+Master :live-remote:Records
+Slave :live-local:Records
 Create Slave
 Expunge Both
 
@@ -154,6 +184,8 @@ Channel gmail-sent
 Channel gmail-draft
 Channel gmail-spam
 Channel live-inbox
+Channel live-su
+Channel live-records
 Channel live-drafts
 Channel live-sent
 Channel live-junk
@@ -166,3 +198,5 @@ Channel uni-church
 Channel uni-sh
 Channel uni-admin
 Channel uni-clutter
+Channel uni-wk
+Channel uni-shire

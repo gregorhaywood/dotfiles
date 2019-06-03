@@ -1,0 +1,11 @@
+[Unit]
+Description=User resume actions
+After=suspend.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/notify-send hi            
+
+[Install]
+WantedBy=suspend.target
+

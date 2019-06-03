@@ -1,10 +1,13 @@
 
 
+# config
 set from = GMAIL_ADDR
 set sendmail = "msmtp -a gmail
 
+# set folder = "~/Mail/Gmail"
 set postponed = "+Gmail/Drafts"
 set record = "+Gmail/Sent"
+save-hook .. 'Gmail/'
 
 color status green default
 color sidebar_divider green default

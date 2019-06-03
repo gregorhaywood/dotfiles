@@ -9,7 +9,7 @@ case "$1" in
         lock
     	;;
     suspend)
-      	lock && sleep 1; systemctl suspend
+      	lock && sleep 1; systemctl suspend; systemctl --user restart mbsync.timer
         ;;
     hibernate)
         lock && sleep 1; systemctl hibernate

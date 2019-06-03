@@ -45,16 +45,20 @@ hdr_order from: to: cc: date: subject:  # and in this order
 
 
 # Default Inbox
-set spoolfile = "+Gmail"
+set spoolfile = "+Uni"
+# mailboxes = "+Gmail" "+Live" "+Uni"
 mailboxes	"+Gmail" "+Gmail/Sent" \
 		"+Gmail/Drafts" \
 		"+Gmail/Spam" \
-		"+Live"  "+Live/Sent" \
+		"+Live" \
+		"+Live/SU" \
+		"+Live/Records" \
+		"+Live/Sent" \
 		"+Live/Drafts" \
 		"+Live/Spam" \
 		"+Uni" "+Uni/SH" \
-		"+Uni/CW" \
-		"+Uni/Church" \
+		"+Uni/CW" "+Uni/Shire" \
+		"+Uni/Church" "+Uni/Work" \
 		"+Uni/Admin" \
 		"+Uni/Clutter" \
 		"+Uni/Sent" "+Uni/Drafts" \
@@ -69,10 +73,6 @@ bind pager <Up> half-up
 
 
 
-# default sender
-folder-hook Gmail/* source ~/Mail/.config/gmail.mutt
-folder-hook Live/* source ~/Mail/.config/live.mutt
-folder-hook Uni/* source ~/Mail/.config/uni.mutt
 
 set realname="Gregor"
 
@@ -102,16 +102,21 @@ set sidebar_folder_indent
 
 set sidebar_indent_string="|__"
 
+# default sender
+folder-hook Gmail/* source ~/Mail/.config/gmail.mutt
+folder-hook Live/* source ~/Mail/.config/live.mutt
+folder-hook Uni/* source ~/Mail/.config/uni.mutt
+
 # Change Maildir
 macro index,pager <Right> <sidebar-next>
 macro index,pager <Left> <sidebar-prev>
 macro index,pager / <sidebar-open>
 
 # Inbox Shortcuts
-macro index,pager g <change-folder>=Gmail<enter>
-macro index,pager l <change-folder>=Live<enter>
+macro index,pager g <change-folder>~/Mail/Gmail<enter>
+macro index,pager l <change-folder>~/Mail/Live<enter>
 # academic
-macro index,pager a <change-folder>=Uni<enter>
+macro index,pager a <change-folder>~/Mail/Uni<enter>
 
 # Add alia
 bind pager \Ca create-alias
