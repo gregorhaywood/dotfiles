@@ -36,8 +36,8 @@ bindsym $mod+Shift+x kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym F1 $exec dmenu_run
-bindsym F2 $exec brave
+bindsym $mod+F1 $exec dmenu_run
+bindsym $mod+F2 $exec brave
 
 # change focus
 bindsym $mod+Left focus left
@@ -156,10 +156,10 @@ for_window [class="^.*"] border pixel 1
 
 
 # Startup applications
-exec_always --no-startup-id $scripts/psTree.sh
 exec_always --no-startup-id polybar status
 exec_always --no-startup-id dunst
 exec_always --no-startup-id unclutter --timeout 1 -b 
+exec_always --no-startup-id feh --bg-scale ~/artemis/bg
 
 # Keybindings
 # bindsym $mod+e $exec $scripts/email.sh 

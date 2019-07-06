@@ -6,15 +6,25 @@ set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
 set certificate_file = ~/.mutt/certificates  # where to store certs
 set mailcap_path     = ~/dotfiles/mutt/mailcap       # entries for filetypes
 set tmpdir           = /tmp          # where to keep temp files
-# set signature        = ~/.mutt/sig           # my signature file
-
+set signature        = ~/dotfiles/mutt/sig           # my signature file
+set sig_on_top
 # Source aliases
 source $alias_file
 
+set fast_reply=yes
+set include=yes
 
-alternative_order text/html text/plain
-auto_view text/html
+alternative_order text/plain text/html
+auto_view text/plain text/html
 
+set pager_stop=yes
+
+set wrapmargin=4
+unset markers
+
+
+set text_flowed=yes
+set sort=threads
 
 # Basic Options --------------------------------------
 set wait_key = no        # shut up, mutt
@@ -34,7 +44,7 @@ set sleep_time=0		 # change dir instantly
 
 # Status Bar -----------------------------------------
 set status_chars  = " *%A"
-set status_format = "---[ Folder: %f ]---[%r%m messages%?n? (%n new)?%?d? (%d to delete)? ]---%>-"
+set status_format = "━━━━━━━━━━━━━━━━━━━━━━━┫ Folder: %f ┣━━━┫%r%m messages%?n? (%n new)?%?d? (%d to delete)? ┣━━━%>━"
 
 
 # Header Options -------------------------------------
@@ -59,7 +69,7 @@ mailboxes	"+Gmail" "+Gmail/Sent" \
 		"+Uni" "+Uni/SH" \
 		"+Uni/CW" "+Uni/Shire" \
 		"+Uni/Church" "+Uni/Work" \
-		"+Uni/Admin" \
+		"+Uni/Blackhat" "+Uni/Admin" \
 		"+Uni/Clutter" \
 		"+Uni/Sent" "+Uni/Drafts" \
 		"+Uni/Junk" \
@@ -74,7 +84,7 @@ bind pager <Up> half-up
 
 
 
-set realname="Gregor"
+set realname="Gregor Haywood"
 
 ####
 # Account Settings 
@@ -90,7 +100,7 @@ set realname="Gregor"
 # Sidebar Patch --------------------------------------
 set sidebar_visible = yes
 set sidebar_width   = 24
-set sidebar_divider_char = '|'
+set sidebar_divider_char = '┃'
 
 # Mailbox Format
 set mail_check_stats
@@ -100,7 +110,7 @@ set sidebar_short_path
 set sidebar_delim_chars="/"
 set sidebar_folder_indent
 
-set sidebar_indent_string="|__"
+set sidebar_indent_string="├──"
 
 # default sender
 folder-hook Gmail/* source ~/Mail/.config/gmail.mutt
@@ -115,10 +125,13 @@ macro index,pager / <sidebar-open>
 # Inbox Shortcuts
 macro index,pager g <change-folder>~/Mail/Gmail<enter>
 macro index,pager l <change-folder>~/Mail/Live<enter>
-# academic
 macro index,pager a <change-folder>~/Mail/Uni<enter>
 
-# Add alia
+# HTML in browser
+macro attach b '<search>html<enter><pipe-entry>brave "data:text/html;base64,$(base64 -w 0 <&0)"<enter>'
+macro index,pager b '<view-attachments><search>html<enter><pipe-entry>brave "data:text/html;base64,$(base64 -w 0 <&0)"<enter><exit>'
+
+# Add alias
 bind pager \Ca create-alias
 
 

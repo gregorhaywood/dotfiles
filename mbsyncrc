@@ -56,6 +56,12 @@ Slave :uni-local:Shire
 Create Slave
 Expunge Both
 
+Channel uni-bh
+Master :uni-remote:Inbox/Blackhat
+Slave :uni-local:Blackhat
+Create Slave
+Expunge Both
+
 Channel uni-wk
 Master :uni-remote:Inbox/Work
 Slave :uni-local:Work
@@ -134,6 +140,12 @@ Slave :live-local:Sent
 Create Slave
 Expunge Both
 
+Channel live-records
+Master :live-remote:Records
+Slave :live-local:Records
+Create Slave
+Expunge Both
+
 Channel live-junk
 Master :live-remote:Junk
 Slave :live-local:Spam 
@@ -200,3 +212,4 @@ Channel uni-admin
 Channel uni-clutter
 Channel uni-wk
 Channel uni-shire
+Channel uni-bh

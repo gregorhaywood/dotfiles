@@ -30,7 +30,10 @@ alias py=python
 alias pip='python3 -m pip'
 alias venv='. venv/bin/activate'
 alias vim='nvim'
-alias la='ls -la'                                                                                                                                    
+alias la='ls -la'
+
+alias sudo='sudo '
+
 alias mutt='neomutt'
 
 alias day='redshift -P -O 6500'
@@ -42,7 +45,7 @@ export EDITOR=nvim
 export VISUAL=$EDITOR
 export TERMINAL=urxvt
 export SHELL=/bin/bash
-
+export BROWSER=brave
 
 
 
