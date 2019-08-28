@@ -66,10 +66,10 @@ mailboxes	"+Gmail" "+Gmail/Sent" \
 		"+Live/Sent" \
 		"+Live/Drafts" \
 		"+Live/Spam" \
-		"+Uni" "+Uni/SH" \
+		"+Uni" "+Uni/MSci" "+Uni/MLS" \
 		"+Uni/CW" "+Uni/Shire" \
 		"+Uni/Church" "+Uni/Work" \
-		"+Uni/Blackhat" "+Uni/Admin" \
+		"+Uni/Admin" \
 		"+Uni/Clutter" \
 		"+Uni/Sent" "+Uni/Drafts" \
 		"+Uni/Junk" \

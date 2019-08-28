@@ -35,7 +35,12 @@ font-4 = FontAwesome-Brands:size=12
 font-5 = FontAwesome-Solid:size=12
 
 modules-left = i3 xwindow 
-modules-right = network filesystem backlight audio battery date 
+modules-right = nordvpn network filesystem backlight audio battery date 
+
+[module/nordvpn]
+type = custom/script
+exec = ~/dotfiles/polybar/nordvpn.sh
+interval = 5
 
 [module/xwindow]
 type = internal/xwindow

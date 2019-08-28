@@ -20,15 +20,15 @@ Slave :uni-local:
 Create Slave
 Expunge Both
 
-Channel uni-sh
-Master :uni-remote:Inbox/SH
-Slave :uni-local:SH
+Channel uni-msci
+Master :uni-remote:Inbox/MSci
+Slave :uni-local:MSci
 Create Slave
 Expunge Both
 
-Channel uni-shire
-Master :uni-remote:Inbox/Shire
-Slave :uni-local:Shire
+Channel uni-mls
+Master :uni-remote:Inbox/MLS
+Slave :uni-local:MLS
 Create Slave
 Expunge Both
 
@@ -53,12 +53,6 @@ Expunge Both
 Channel uni-shire
 Master :uni-remote:Inbox/Shire
 Slave :uni-local:Shire
-Create Slave
-Expunge Both
-
-Channel uni-bh
-Master :uni-remote:Inbox/Blackhat
-Slave :uni-local:Blackhat
 Create Slave
 Expunge Both
 
