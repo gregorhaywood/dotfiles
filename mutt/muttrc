@@ -25,6 +25,7 @@ unset markers
 
 set text_flowed=yes
 set sort=threads
+set sort_aux=last-date-received
 
 # Basic Options --------------------------------------
 set wait_key = no        # shut up, mutt

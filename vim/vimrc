@@ -7,10 +7,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-commentary'
+Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 
 let g:tex_flavor = "latex"
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_auto_insert_bullets = 0
+
+
 
 " Split movement
 nnoremap <C-J> <C-W><C-J>
@@ -53,6 +58,7 @@ set mouse=v
 function! MAKE()
         let result = system("make > /dev/null &")
 endfunction
+
 command M call MAKE()
 
 
