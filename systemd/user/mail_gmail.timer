@@ -1,0 +1,10 @@
+[Unit]
+Description=Gmail Daily Synchronisation
+
+[Timer]
+OnStartupSec=2m
+OnUnitActiveSec=1d
+Unit=mail_gmail.service
+
+[Install]
+WantedBy=timers.target

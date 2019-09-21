@@ -44,12 +44,6 @@ Slave :uni-local:Admin
 Create Slave
 Expunge Both
 
-Channel uni-clutter
-Master :uni-remote:Clutter
-Slave :uni-local:Clutter
-Create Slave
-Expunge Both
-
 Channel uni-shire
 Master :uni-remote:Inbox/Shire
 Slave :uni-local:Shire
@@ -184,17 +178,21 @@ Slave :gmail-local:Spam
 Create Slave
 Expunge Both
 
-Group auto
+Group gmail
 Channel gmail-inbox
 Channel gmail-sent
 Channel gmail-draft
 Channel gmail-spam
+
+Group live
 Channel live-inbox
 Channel live-su
 Channel live-records
 Channel live-drafts
 Channel live-sent
 Channel live-junk
+
+Group uni
 Channel uni-inbox
 Channel uni-drafts
 Channel uni-sent
@@ -202,6 +200,5 @@ Channel uni-spam
 Channel uni-cw
 Channel uni-church
 Channel uni-admin
-Channel uni-clutter
 Channel uni-wk
 Channel uni-shire

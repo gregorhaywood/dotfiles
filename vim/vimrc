@@ -37,7 +37,7 @@ set swapfile
 syntax on
 colorscheme default
 set t_Co=16             " 16 colours (xresources)
-
+highlight ColorColumn ctermbg=0
 
 " File specific stuff 
 filetype plugin on

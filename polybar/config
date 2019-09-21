@@ -35,12 +35,63 @@ font-4 = FontAwesome-Brands:size=12
 font-5 = FontAwesome-Solid:size=12
 
 modules-left = i3 xwindow 
-modules-right = nordvpn network filesystem backlight audio battery date 
+modules-right = uni1 uni2 live1 live2 gmail1 gmail2 nordvpn1 nordvpn2 network filesystem backlight audio battery date 
 
-[module/nordvpn]
+
+[module/nordvpn1]
 type = custom/script
 exec = ~/dotfiles/polybar/nordvpn.sh
 interval = 5
+format-underline =  ${colors.good} 
+
+[module/nordvpn2]
+type = custom/script
+exec = echo 'VPN DOWN'
+exec-if = ~/dotfiles/polybar/vpn_down.sh 
+interval = 5
+format-underline =  ${colors.bad} 
+
+[module/uni1]
+type = custom/script
+exec = echo ' U '
+exec-if = ~/dotfiles/polybar/check.py uni up 
+interval = 30
+format-underline =  ${colors.good} 
+
+[module/uni2]
+type = custom/script
+exec = echo ' U '
+exec-if = ~/dotfiles/polybar/check.py uni down 
+interval = 30
+format-underline =  ${colors.bad} 
+
+[module/live1]
+type = custom/script
+exec = echo ' L '
+exec-if = ~/dotfiles/polybar/check.py live up 
+interval = 600
+format-underline =  ${colors.good} 
+
+[module/live2]
+type = custom/script
+exec = echo ' L '
+exec-if = ~/dotfiles/polybar/check.py live down 
+interval = 600
+format-underline =  ${colors.bad} 
+
+[module/gmail1]
+type = custom/script
+exec = echo ' G '
+exec-if = ~/dotfiles/polybar/check.py gmail up 
+interval = 600
+format-underline =  ${colors.good} 
+
+[module/gmail2]
+type = custom/script
+exec = echo ' G '
+exec-if = ~/dotfiles/polybar/check.py gmail down 
+interval = 600
+format-underline =  ${colors.bad} 
 
 [module/xwindow]
 type = internal/xwindow

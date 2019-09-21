@@ -1,0 +1,7 @@
+[Unit]
+Description=Gmail synchronization service
+
+[Service]
+Type=oneshot
+; - because script may be non-zero (eg, no connection)
+ExecStart=-/home/mitata/dotfiles/scripts/email.sh gmail
