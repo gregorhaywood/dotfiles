@@ -123,9 +123,9 @@ macro index,pager <Left> <sidebar-prev>
 macro index,pager / <sidebar-open>
 
 # Inbox Shortcuts
-macro index,pager g <change-folder>~/Mail/Gmail<enter>
-macro index,pager l <change-folder>~/Mail/Live<enter>
-macro index,pager a <change-folder>~/Mail/Uni<enter>
+macro index g <change-folder>~/Mail/Gmail<enter>
+macro index l <change-folder>~/Mail/Live<enter>
+macro index a <change-folder>~/Mail/Uni<enter>
 
 # HTML in browser
 macro attach b '<search>html<enter><pipe-entry>brave "data:text/html;base64,$(base64 -w 0 <&0)"<enter>'

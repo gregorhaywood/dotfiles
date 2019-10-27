@@ -1,33 +1,38 @@
 [global]
-    font = "Droid Sans 8"
+	# font and format
+    font = "FantasqueSansMono-Regular 12"
     allow_markup = yes
-    format = "<b>%s</b>\n%b"
-    sort = yes
-    indicate_hidden = yes
+    format = "<b>%a\n</b>%s\n%b"
     alignment = center
-    bounce_freq = 0
-    show_age_threshold =60
     word_wrap = yes
     ignore_newline = no
-    geometry = "200x5-6+30"
     transparency = 0
-    idle_threshold = 120
-    monitor = 0
-    follow = mouse
-    sticky_history = yes
-    line_height = 0
-    separator_height = 2
-    padding = 8
-    horizontal_padding = 8
-    separator_color = "#585858"
+    show_age_threshold = 60 # show age of old messages
+
+	# ordering
+    sort = yes
+    indicate_hidden = yes
+	
+  	# don't care if user is idle
+	idle_threshold = 0	
+
+	# size and monitor to use
+    geometry = "300x5-0+28"
+	monitor = 0				
+    follow = none
+    
+	# no line seperating
+	line_height = 0
+
+    # seperator border between messages
+	separator_height = 2
+	separator_color = frame
+
+	# no startup debug
     startup_notification = false
-    # https://github.com/knopwob/dunst/issues/26#issuecomment-36159395
-    #icon_position = left
-    #icon_folders = /usr/share/icons/elementary/actions/16/
 
 [frame]
-    width = 1
-    color = "#383838"
+    width = 2
 
 [shortcuts]
     close = ctrl+space
@@ -36,16 +41,19 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#181818"
-    foreground = "#E3C7AF"
-    timeout = 5
+    frame_color = "#00ff00"
+    foreground = "#bbbbbb"
+    background = "#1a1a1a"
+    timeout = 10
 
 [urgency_normal]
-    background = "#181818"
-    foreground = "#E3C7AF"
+    foreground = "#bbbbbb"
+    background = "#1a1a1a"
+    frame_color = "#00ff00"
     timeout = 20
 
 [urgency_critical]
-    background = "#181818"
-    foreground = "#E3C7AF"
+    foreground = "#bbbbbb"
+    background = "#1a1a1a"
+    frame_color = "#ff0000"
     timeout = 0

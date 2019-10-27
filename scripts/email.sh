@@ -15,7 +15,7 @@ if [ "$STATUS" = "Connected" ]; then
 	fi
 else
 	# or VPN is down an IP address is not UK
-	AREA=$(geoiplookup $(curl ifconfig.me) | tr -d ' ' | cut -d ',' -f2)
+	AREA=$(geoiplookup $(curl -s ifconfig.me) | tr -d ' ' | cut -d ',' -f2)
 	if [ "$AREA" != "UnitedKingdom" ]; then
 		exit 0
 	fi

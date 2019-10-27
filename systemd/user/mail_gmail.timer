@@ -3,7 +3,7 @@ Description=Gmail Daily Synchronisation
 
 [Timer]
 OnStartupSec=2m
-OnUnitActiveSec=1d
+OnUnitActiveSec=8h
 Unit=mail_gmail.service
 
 [Install]

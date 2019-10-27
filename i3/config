@@ -1,6 +1,9 @@
 set $i3 ~/dotfiles/i3
 set $scripts ~/dotfiles/scripts
 set $exec exec --no-startup-id
+set $internal "eDP-1"
+set $external "HDMI-1-2"
+
 
 # i3 config file (v4)
 set $mod Mod4
@@ -44,6 +47,7 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
 
 # move focused window
 bindsym $mod+Shift+Left move left

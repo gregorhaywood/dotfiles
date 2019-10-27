@@ -46,49 +46,49 @@ format-underline =  ${colors.good}
 
 [module/nordvpn2]
 type = custom/script
-exec = echo 'VPN DOWN'
+exec = echo 'VPN DOWN '
 exec-if = ~/dotfiles/polybar/vpn_down.sh 
 interval = 5
 format-underline =  ${colors.bad} 
 
 [module/uni1]
 type = custom/script
-exec = echo ' U '
+exec = echo 'U '
 exec-if = ~/dotfiles/polybar/check.py uni up 
 interval = 30
 format-underline =  ${colors.good} 
 
 [module/uni2]
 type = custom/script
-exec = echo ' U '
+exec = echo 'U '
 exec-if = ~/dotfiles/polybar/check.py uni down 
 interval = 30
 format-underline =  ${colors.bad} 
 
 [module/live1]
 type = custom/script
-exec = echo ' L '
+exec = echo 'L '
 exec-if = ~/dotfiles/polybar/check.py live up 
 interval = 600
 format-underline =  ${colors.good} 
 
 [module/live2]
 type = custom/script
-exec = echo ' L '
+exec = echo 'L '
 exec-if = ~/dotfiles/polybar/check.py live down 
 interval = 600
 format-underline =  ${colors.bad} 
 
 [module/gmail1]
 type = custom/script
-exec = echo ' G '
+exec = echo 'G '
 exec-if = ~/dotfiles/polybar/check.py gmail up 
 interval = 600
 format-underline =  ${colors.good} 
 
 [module/gmail2]
 type = custom/script
-exec = echo ' G '
+exec = echo 'G '
 exec-if = ~/dotfiles/polybar/check.py gmail down 
 interval = 600
 format-underline =  ${colors.bad} 

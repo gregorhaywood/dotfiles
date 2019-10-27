@@ -7,8 +7,6 @@ vim/plugged/*
 # Ignore
 vim/.netrwhist
 
-ranger/history 
-ranger/bookmarks
 
 
 
