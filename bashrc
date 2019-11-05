@@ -40,7 +40,7 @@ alias day='redshift -P -O 6500'
 alias night='redshift -P -O 3700'
 
 alias meeting='printf "# Meeting on $(date "+%y %m %d %Y")\n\n" > $(date +%y_%m_%d.md); vim $( date +%y_%m_%d.md)'
-
+alias pycheck='~/dotfiles/scripts/pycheck.sh'
 
 
 # Vars 

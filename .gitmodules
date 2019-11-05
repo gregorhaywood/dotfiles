@@ -1,0 +1,24 @@
+[submodule "vim/lightline.vim"]
+	path = vim/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule "vim/vim-commentary"]
+	path = vim/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "vim/vim-markdown"]
+	path = vim/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "vim/vim-polyglot"]
+	path = vim/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "vim/plugged/vim-commentary"]
+	path = vim/plugged/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "vim/plugged/vim-polyglot"]
+	path = vim/plugged/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "vim/plugged/lightline.vim"]
+	path = vim/plugged/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule "vim/plugged/vim-markdown"]
+	path = vim/plugged/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git

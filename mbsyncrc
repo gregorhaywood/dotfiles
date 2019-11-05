@@ -56,9 +56,15 @@ Slave :uni-local:Work
 Create Slave
 Expunge Both
 
-Channel uni-cw
-Master :uni-remote:Inbox/Practicals
-Slave :uni-local:CW
+Channel uni-phd
+Master :uni-remote:Inbox/PhD
+Slave :uni-local:PhD
+Create Slave
+Expunge Both
+
+Channel uni-wed
+Master :uni-remote:Inbox/Wedding
+Slave :uni-local:Wedding
 Create Slave
 Expunge Both
 
@@ -197,7 +203,8 @@ Channel uni-inbox
 Channel uni-drafts
 Channel uni-sent
 Channel uni-spam
-Channel uni-cw
+Channel uni-phd
+Channel uni-wed
 Channel uni-church
 Channel uni-admin
 Channel uni-wk

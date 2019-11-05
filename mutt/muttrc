@@ -68,8 +68,8 @@ mailboxes	"+Gmail" "+Gmail/Sent" \
 		"+Live/Drafts" \
 		"+Live/Spam" \
 		"+Uni" "+Uni/MSci" "+Uni/MLS" \
-		"+Uni/CW" "+Uni/Shire" \
-		"+Uni/Church" "+Uni/Work" \
+		"+Uni/PhD" "+Uni/Shire" \
+		"+Uni/Wedding" "+Uni/Church" "+Uni/Work" \
 		"+Uni/Admin" \
 		"+Uni/Sent" "+Uni/Drafts" \
 		"+Uni/Junk" \
@@ -116,6 +116,15 @@ set sidebar_indent_string="├──"
 folder-hook Gmail/* source ~/Mail/.config/gmail.mutt
 folder-hook Live/* source ~/Mail/.config/live.mutt
 folder-hook Uni/* source ~/Mail/.config/uni.mutt
+
+# security
+source ~/dotfiles/mutt/gpg.rc
+set crypt_autosign = no
+set crypt_replyencrypt = no
+set crypt_replysign = no
+set crypt_replysignencrypted = no
+set smime_ca_location="/home/mitata/certs/ca-root.crt
+
 
 # Change Maildir
 macro index,pager <Right> <sidebar-next>
