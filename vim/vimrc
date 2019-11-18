@@ -5,15 +5,62 @@ autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 
 
 call plug#begin('~/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
-Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-commentary'
 Plug 'plasticboy/vim-markdown'
+Plug 'scrooloose/nerdtree'
+Plug 'dense-analysis/ale'
+Plug 'vim-airline/vim-airline'
 call plug#end()
+
+
+" ale linter options
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+
+" TODO: map for autofix ? 
+nmap <silent> <C-q> <Plug>(ale_previous_wrap)
+nmap <silent> <C-w> <Plug>(ale_next_wrap)
+
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+let g:ale_fix_on_save = 1
 
 
 let g:tex_flavor = "latex"
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_auto_insert_bullets = 0
+
+" let g:airline_section_a=(mode, crypt, paste, spell, iminsert)
+" let g:airline_section_b=''
+
+if !exists('g:airline_symbols')                                           
+    let g:airline_symbols = {}                                              
+endif 
+
+let g:airline_left_sep=''
+let g:airline_right_sep = ''
+let g:airline_symbols.linenr='Line:'
+let g:airline_symbols.maxlinenr=''
+
+let g:airline_symbols.whitespace = 'Ξ'
+
+
+let g:airline#extensions#default#layout = [
+      \ [ 'a', 'c' ],
+      \ [ 'x', 'z', 'warning', 'error' ]
+      \ ]
+let g:airline#extensions#whitespace#enabled=0
+let g:airline_detect_spell=0
+
+" sections contain parts
+" compose sections here
+function! AirlineInit()
+    let g:airline_section_a = airline#section#create(['mode'])
+    let g:airline_section_c = airline#section#create(['file', 'readonly'])
+    let g:airline_section_x = airline#section#create(['filetype', 'readonly'])
+    let g:airline_section_z = airline#section#create(['linenr', 'maxlinenr'])
+endfunction
+autocmd User AirlineAfterInit call AirlineInit()
 
 
 

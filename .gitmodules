@@ -22,3 +22,12 @@
 [submodule "vim/plugged/vim-markdown"]
 	path = vim/plugged/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "vim/plugged/ale"]
+	path = vim/plugged/ale
+	url = git@github.com:dense-analysis/ale.git
+[submodule "vim/plugged/nerdtree"]
+	path = vim/plugged/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
+[submodule "vim/plugged/vim-airline"]
+	path = vim/plugged/vim-airline
+	url = git@github.com:vim-airline/vim-airline.git
