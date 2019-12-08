@@ -1,11 +1,11 @@
 #!/bin/sh
 
 B='#00000000'  # blank
-C='#ffffff22'  # clear ish
-D='#ff00ffcc'  # default
-T='#ee00eeee'  # text
-W='#880000bb'  # wrong
-V='#bb00bbbb'  # verifying
+C='#ffffffff'  # clear ish
+D='#00ffffcc'  # ring colour
+T=$D # '#ee00eeee'  # text
+W=$D #'#00aaffbb'  # wrong
+V='#00ffaabb'  # verifying
 
 i3lock \
 --insidevercolor=$C   \
@@ -32,8 +32,10 @@ i3lock \
 --clock               \
 --indicator           \
 --timestr="%H:%M:%S"  \
---datestr="%A, %m %Y" \
-
+--datestr="%A %B %Y" \
+\
+--radius 120 \
+--ring-width 26 \
 # --veriftext="Drinking verification can..."
 # --wrongtext="Nope!"
 # --textsize=20

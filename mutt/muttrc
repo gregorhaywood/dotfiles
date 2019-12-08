@@ -119,12 +119,18 @@ folder-hook Uni/* source ~/Mail/.config/uni.mutt
 
 # security
 source ~/dotfiles/mutt/gpg.rc
-set crypt_autosign = no
-set crypt_replyencrypt = no
-set crypt_replysign = no
-set crypt_replysignencrypted = no
-set smime_ca_location="/home/mitata/certs/ca-root.crt
 
+set pgp_default_key=C6DBAA2E
+
+set crypt_autosign = yes
+set crypt_replysign = yes
+set crypt_replyencrypt = yes
+set crypt_replysignencrypted = yes
+set smime_ca_location="/home/mitata/certs/ca-root.crt"
+
+# Automatic Encryption
+send-hook . 'reset crypt_autoencrypt'
+source ~/Mail/autoencrypt
 
 # Change Maildir
 macro index,pager <Right> <sidebar-next>

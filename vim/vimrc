@@ -17,7 +17,6 @@ call plug#end()
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 
-" TODO: map for autofix ? 
 nmap <silent> <C-q> <Plug>(ale_previous_wrap)
 nmap <silent> <C-w> <Plug>(ale_next_wrap)
 
@@ -39,6 +38,8 @@ endif
 
 let g:airline_left_sep=''
 let g:airline_right_sep = ''
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline_symbols.linenr='Line:'
 let g:airline_symbols.maxlinenr=''
 
@@ -62,11 +63,20 @@ function! AirlineInit()
 endfunction
 autocmd User AirlineAfterInit call AirlineInit()
 
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+" let g:airline#extensions#tabline#show_close_button = 0
+" let g:airline#extensions#tabline#show_splits = 0
+" let g:airline#extensions#tabline#show_tab_type = 0
+" let g:airline#extensions#tabline#show_tab_nr = 1
+" let g:airline#extensions#tabline#tab_nr_type = 1
+" let g:airline#extensions#tabline#show_buffers = 0
 
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 " Split movement
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
+nnoremap <C-J> <C-W><C-K>
+nnoremap <C-K> <C-W><C-J>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 

@@ -6,8 +6,8 @@ foreground-alt = #888
 line = #1a1a1a
 mid = #ff0
 bad =  #f00
-good =  #0f0
-casual = #0f0
+good =  #0ff
+casual = #0ff
 bar = ${self.casual}
 
 

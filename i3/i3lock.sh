@@ -1,7 +1,7 @@
 #! /bin/sh
 
 lock() {
- 	~/dotfiles/i3/bar.sh  
+ 	~/dotfiles/i3/lock.sh  
 }
 
 case "$1" in

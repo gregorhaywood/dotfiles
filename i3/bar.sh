@@ -1,6 +1,6 @@
 #!/bin/sh
 
-B='#00000000'  # blank
+B='#ff000000'  # blank
 C='#ffffff22'  # clear ish
 D='#ff00ffcc'  # default
 T='#ee00eeee'  # text
@@ -20,7 +20,6 @@ i3lock \
 --bar-step 50 \
 --bar-width 250 \
 --redraw-thread \
-\
 --clock \
 --force-clock \
 --timepos 5:h-80 \
