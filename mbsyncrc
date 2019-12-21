@@ -26,9 +26,9 @@ Slave :uni-local:MSci
 Create Slave
 Expunge Both
 
-Channel uni-mls
-Master :uni-remote:Inbox/MLS
-Slave :uni-local:MLS
+Channel uni-lists
+Master :uni-remote:Inbox/Lists
+Slave :uni-local:Lists
 Create Slave
 Expunge Both
 
@@ -209,4 +209,4 @@ Channel uni-church
 Channel uni-admin
 Channel uni-wk
 Channel uni-shire
-Channel uni-mls
+Channel uni-lists
