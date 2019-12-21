@@ -21,6 +21,8 @@ else
 	fi
 fi
 
+# TODO
+# switch this to syncying everything if the time has elapsed
 
 # do update
 mbsync $1

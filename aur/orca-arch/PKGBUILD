@@ -1,0 +1,21 @@
+pkgname=orca-bin
+pkgver=1.2.1
+pkgrel=1
+pkgdesc="Plotly's image-exporting utilities"
+arch=('x86_64')
+url="https://github.com/plotly/orca"
+license=(MIT)
+depends=()
+optdepends=()
+source=(https://github.com/plotly/orca/releases/download/v$pkgver/orca-$pkgver-x86_64.AppImage)
+noextract=(orca-$pkgver-x86_64.AppImage)
+sha256sums=(423e7b7a27af9a921b6eb864e8436b58ec0b06eac0c79ca62688b1d9795a7e32)
+
+package() {
+  # cd $srcdir
+  chmod +x orca-$pkgver-x86_64.AppImage
+  mkdir -p $pkgdir/usr/bin
+  # NOTE: this is not working and I don't know why
+  cp orca-$pkgver-x86_64.AppImage $pkgdir/usr/bin/orca
+}
+

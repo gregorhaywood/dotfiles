@@ -19,7 +19,7 @@ auto_view text/plain text/html
 
 set pager_stop=yes
 
-set wrapmargin=4
+set wrap=-4
 unset markers
 
 
@@ -120,6 +120,7 @@ folder-hook Uni/* source ~/Mail/.config/uni.mutt
 # security
 source ~/dotfiles/mutt/gpg.rc
 
+set pgp_use_gpg_agent=yes
 set pgp_default_key=C6DBAA2E
 
 set crypt_autosign = yes

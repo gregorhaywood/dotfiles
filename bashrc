@@ -31,16 +31,16 @@ alias pip='python3 -m pip'
 alias venv='. venv/bin/activate'
 alias vim='nvim'
 alias la='ls -la'
-
 alias sudo='sudo '
-
 alias mutt='neomutt'
-
 alias day='redshift -P -O 6500'
 alias night='redshift -P -O 3700'
-
 alias meeting='printf "# Meeting on $(date "+%y %m %d %Y")\n\n" > $(date +%y_%m_%d.md); vim $( date +%y_%m_%d.md)'
 alias pycheck='~/dotfiles/scripts/pycheck.sh'
+
+# Technically not an alias
+# Entering a directory name changes to there
+shopt -s autocd
 
 
 # Vars 
@@ -50,6 +50,11 @@ export TERMINAL=urxvt
 export SHELL=/bin/bash
 export BROWSER=brave
 
+# GPG
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
+export GPG_AGENT_INFO="Set for Mutt"
+export KEY="C6DBAA2E"
 
 
 # Bash Prompt
@@ -105,9 +110,6 @@ function parse_dir_small {
 }
 
 export PS1="\`parse_dir_small\`\[\e[32m\]\`parse_git_branch\`\[\e[m\] $ "
-# Mark Ranger 
-if [ -n "$RANGER_LEVEL" ]; then export PS1="[Ranger]$PS1"; fi
-
 export PS2="...> "
 
 # Source local stuff
