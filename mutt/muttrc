@@ -14,8 +14,11 @@ source $alias_file
 set fast_reply=yes
 set include=yes
 
+
+# auto_view text/plain text/html
+auto_view text/html
+
 alternative_order text/plain text/html
-auto_view text/plain text/html
 
 set pager_stop=yes
 

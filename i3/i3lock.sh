@@ -1,5 +1,7 @@
 #! /bin/sh
 
+
+
 lock() {
  	~/dotfiles/i3/lock.sh  
 }
