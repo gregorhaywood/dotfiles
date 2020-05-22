@@ -21,7 +21,7 @@ fi
 # assumed config dir
 export XDG_CONFIG_HOME="$HOME/.config"
 
-
+export PATH=$PATH:~/.local/bin
 
 
 # Universal Aliases 
@@ -37,6 +37,7 @@ alias day='redshift -P -O 6500'
 alias night='redshift -P -O 3700'
 alias meeting='printf "# Meeting on $(date "+%y %m %d %Y")\n\n" > $(date +%y_%m_%d.md); vim $( date +%y_%m_%d.md)'
 alias pycheck='~/dotfiles/scripts/pycheck.sh'
+alias dwarftherapist="sudo ~/dotfiles/scripts/dwarftherapist.sh"
 
 # Technically not an alias
 # Entering a directory name changes to there

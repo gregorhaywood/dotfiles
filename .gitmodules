@@ -34,9 +34,6 @@
 [submodule "aur/brave-bin"]
 	path = aur/brave-bin
 	url = https://aur.archlinux.org/brave-bin.git
-[submodule "aur/i3lock-color-git"]
-	path = aur/i3lock-color-git
-	url = https://aur.archlinux.org/i3lock-color-git.git
 [submodule "aur/ttf-font-awesome-4"]
 	path = aur/ttf-font-awesome-4
 	url = https://aur.archlinux.org/ttf-font-awesome-4.git
@@ -52,3 +49,9 @@
 [submodule "aur/pandoc-bin"]
 	path = aur/pandoc-bin
 	url = https://aur.archlinux.org/pandoc-bin.git
+[submodule "aur/dwarftherapist-git"]
+	path = aur/dwarftherapist-git
+	url = https://aur.archlinux.org/dwarftherapist-git.git
+[submodule "aur/teams"]
+	path = aur/teams
+	url = https://aur.archlinux.org/teams.git
