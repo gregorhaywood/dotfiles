@@ -55,3 +55,6 @@
 [submodule "aur/teams"]
 	path = aur/teams
 	url = https://aur.archlinux.org/teams.git
+[submodule "vim/plugged/vimwiki"]
+	path = vim/plugged/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git

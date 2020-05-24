@@ -1,7 +1,8 @@
 
 autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif 
 
-
+set nocompatible
+filetype plugin on
 
 call plug#begin('~/.vim/plugged')
 Plug 'sheerun/vim-polyglot'
@@ -10,7 +11,12 @@ Plug 'plasticboy/vim-markdown'
 Plug 'scrooloose/nerdtree'
 Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline'
+Plug 'vimwiki/vimwiki'
 call plug#end()
+
+" Vim wiki settings
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 
 
 " ale linter options
