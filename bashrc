@@ -35,9 +35,14 @@ alias sudo='sudo '
 alias mutt='neomutt'
 alias day='redshift -P -O 6500'
 alias night='redshift -P -O 3700'
-alias meeting='printf "# Meeting on $(date "+%y %m %d %Y")\n\n" > $(date +%y_%m_%d.md); vim $( date +%y_%m_%d.md)'
 alias pycheck='~/dotfiles/scripts/pycheck.sh'
 alias dwarftherapist="sudo ~/dotfiles/scripts/dwarftherapist.sh"
+alias key='setxkbmap gb'
+
+
+function meeting() {
+	printf "# Meeting on $(date "+%B %d %Y")\nIn Attendance: Gregor, $1 \n\n" > $(date +%y_%m_%d.md); vim $( date +%y_%m_%d.md);
+}
 
 # Technically not an alias
 # Entering a directory name changes to there

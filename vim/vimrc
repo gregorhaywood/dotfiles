@@ -11,7 +11,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'scrooloose/nerdtree'
 Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline'
-Plug 'vimwiki/vimwiki'
+" Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " Vim wiki settings
@@ -121,9 +121,15 @@ set mouse=v
 function! MAKE()
         let result = system("make > /dev/null &")
 endfunction
-
 command M call MAKE()
 
+" BSD style mode
+function! BSD()
+		set list
+		set listchars=tab:>-
+		set tabstop=8
+endfunction
+command BSD call BSD()
 
 
 

@@ -58,3 +58,6 @@
 [submodule "vim/plugged/vimwiki"]
 	path = vim/plugged/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
+[submodule "aur/r8152-dkms"]
+	path = aur/r8152-dkms
+	url = https://aur.archlinux.org/r8152-dkms.git

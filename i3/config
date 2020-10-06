@@ -1,9 +1,9 @@
 set $i3 ~/dotfiles/i3
 set $scripts ~/dotfiles/scripts
 set $exec exec --no-startup-id
-set $internal "eDP-1"
-set $external "HDMI-1-2"
 
+set $extern HDMI-1-0
+set $intern eDP1
 
 # i3 config file (v4)
 set $mod Mod4
@@ -95,6 +95,20 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
+# Workspace 10 is external if it exists
+# Workspace 1 is always internal
+workspace $ws10 output $extern $intern
+workspace $ws1 output $intern
+workspace $ws2 output $intern
+workspace $ws3 output $intern
+workspace $ws4 output $intern
+workspace $ws5 output $intern
+workspace $ws6 output $intern
+workspace $ws7 output $intern
+workspace $ws8 output $intern
+workspace $ws9 output $intern
+
+
 bindsym $mod+q workspace $ws4
 bindsym $mod+w workspace $ws5
 bindsym $mod+e workspace $ws6
@@ -153,11 +167,9 @@ bindsym $mod+Control+l $exec $i3/i3lock.sh suspend
 
 
 
-# i3 gaps 
+# Border  
 for_window [class="^.*"] border pixel 1
-# gaps inner 10
-# gaps outer 0
-
+hide_edge_borders both
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #00ffff #00ffff #ffffff #00ffff   #00ffff
@@ -179,5 +191,6 @@ exec_always --no-startup-id feh --bg-scale ~/artemis/bg
 # bindsym $mod+e $exec $scripts/email.sh 
 bindsym $mod+p $exec $scripts/psTree.sh
 
-
+bindsym $mod+Shift+h move workspace to output $extern
+bindsym $mod+Shift+g move workspace to output primary
 
