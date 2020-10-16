@@ -61,3 +61,6 @@
 [submodule "aur/r8152-dkms"]
 	path = aur/r8152-dkms
 	url = https://aur.archlinux.org/r8152-dkms.git
+[submodule "aur/nouveau-fw"]
+	path = aur/nouveau-fw
+	url = https://aur.archlinux.org/nouveau-fw.git

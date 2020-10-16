@@ -2,7 +2,7 @@ set $i3 ~/dotfiles/i3
 set $scripts ~/dotfiles/scripts
 set $exec exec --no-startup-id
 
-set $extern HDMI-1-0
+set $extern HDMI-1-2
 set $intern eDP1
 
 # i3 config file (v4)
@@ -97,7 +97,6 @@ bindsym $mod+0 workspace $ws10
 
 # Workspace 10 is external if it exists
 # Workspace 1 is always internal
-workspace $ws10 output $extern $intern
 workspace $ws1 output $intern
 workspace $ws2 output $intern
 workspace $ws3 output $intern
@@ -107,6 +106,7 @@ workspace $ws6 output $intern
 workspace $ws7 output $intern
 workspace $ws8 output $intern
 workspace $ws9 output $intern
+workspace $ws10 output $extern
 
 
 bindsym $mod+q workspace $ws4
