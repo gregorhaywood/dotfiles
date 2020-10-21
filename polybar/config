@@ -38,9 +38,8 @@ bar = ${self.casual}
 
 
 [bar/status]
-; laptop monitor
 ; top bar
-monitor = eDP1
+monitor = HDMI-4
 bottom = false
 width = 100%
 height = 28
@@ -61,21 +60,8 @@ font-4 = FontAwesome-Brands:size=12
 font-5 = FontAwesome-Solid:size=12
 
 modules-left = i3 xwindow 
-modules-right = uni1 uni2 live1 live2 gmail1 gmail2 nordvpn1 nordvpn2 network filesystem backlight audio battery date 
+modules-right = uni1 uni2 live1 live2 gmail1 gmail2 network filesystem audio date 
 
-
-[module/nordvpn1]
-type = custom/script
-exec = ~/dotfiles/polybar/nordvpn.sh
-interval = 5
-format-underline =  ${colors.good} 
-
-[module/nordvpn2]
-type = custom/script
-exec = echo 'VPN DOWN '
-exec-if = ~/dotfiles/polybar/vpn_down.sh 
-interval = 5
-format-underline =  ${colors.bad} 
 
 [module/uni1]
 type = custom/script
@@ -155,6 +141,7 @@ ws-icon-6 = 7;7
 ws-icon-7 = 8;8
 ws-icon-8 = 9;9
 ws-icon-9 = 10;HDMI
+ws-icon-10 = 99-conky;C
 ws-icon-default = 
 format-underline = ${colors.line}
 
@@ -175,7 +162,7 @@ label-unfocused = %icon%
 label-unfocused-underline = ${colors.line}
 label-unfocused-padding = ${self.padding}
 
-; visible = Active workspace on unfocused monitor
+; visible = Active workspace on unfocused page
 label-visible = %icon%
 label-visible-underline = ${colors.line}
 label-visible-padding = ${self.padding}
@@ -213,7 +200,7 @@ bar-empty-underline = ${colors.background}
 
 [module/network]
 type = internal/network 
-interface = wlo1
+interface = enp3s0
 interval = 1.0
 label-connected = 
 label-disconnected = 

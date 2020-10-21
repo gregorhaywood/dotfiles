@@ -4,20 +4,14 @@ autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 
 set nocompatible
 filetype plugin on
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'plasticboy/vim-markdown'
 Plug 'scrooloose/nerdtree'
 Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline'
-" Plug 'vimwiki/vimwiki'
 call plug#end()
-
-" Vim wiki settings
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
-
 
 " ale linter options
 let g:airline#extensions#ale#enabled = 1
@@ -40,7 +34,7 @@ let g:vim_markdown_auto_insert_bullets = 0
 
 if !exists('g:airline_symbols')                                           
     let g:airline_symbols = {}                                              
-endif 
+endif
 
 let g:airline_left_sep=''
 let g:airline_right_sep = ''

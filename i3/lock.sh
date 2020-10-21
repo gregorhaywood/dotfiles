@@ -1,6 +1,7 @@
 #!/bin/sh
 
 B='#00000000'  # blank
+CLEAR='00000066'
 C='#ffffffff'  # clear ish
 D='#00ffffcc'  # ring colour
 T=$D # '#ee00eeee'  # text
@@ -8,6 +9,7 @@ W=$D #'#00aaffbb'  # wrong
 V='#00ffaabb'  # verifying
 
 i3lock \
+--color=$CLEAR          \
 --insidevercolor=$C   \
 --ringvercolor=$V     \
 \
@@ -27,8 +29,7 @@ i3lock \
 --keyhlcolor=$W       \
 --bshlcolor=$W        \
 \
---screen 1            \
---blur 5              \
+--blur 1             \
 --clock               \
 --indicator           \
 --timestr="%H:%M:%S"  \

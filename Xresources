@@ -1,9 +1,9 @@
 ! Reload with $ xrdb ~/.Xresources
 
 ! make the background transparent
-URxvt.transparent: true
-URxvt.shading: 40
-*.blurRadius: 10
+!URxvt.transparent: true
+!URxvt.shading: 40
+!*.blurRadius: 10
 
 *.foreground:   	#ffffff
 *.background:   	#000000
