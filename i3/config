@@ -197,10 +197,10 @@ client.background       #1a1a1a
 
 
 # Startup applications
-exec_always --no-startup-id polybar status
+exec_always --no-startup-id polybar $HOSTNAME 
 exec_always --no-startup-id dunst
 exec_always --no-startup-id unclutter --timeout 1 -b 
-exec_always --no-startup-id feh --bg-scale ~/codex/bg
+exec_always --no-startup-id feh --bg-scale ~/$HOSTNAME/bg
 exec_always --no-startup-id picom -b
 
 # Keybindings

@@ -60,9 +60,34 @@ bar = ${self.casual}
 
 
 
-[bar/status]
+[bar/codex]
 ; top bar
 monitor = HDMI-4
+bottom = false
+width = 100%
+height = 28
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 4
+padding = 0
+module-margin = 0
+
+; fonts
+font-0 = FantasqueSansMono-Regular:size=12;0
+font-1 = FantasqueSansMono-Bold:size=12;0
+font-2 = FantasqueSansMono-Italic:size=12;0
+font-3 = FontAwesome-Regular:size=12
+font-4 = FontAwesome-Brands:size=12
+font-5 = FontAwesome-Solid:size=12
+
+modules-left = i3 xwindow 
+modules-right = uni1 uni2 live1 live2 gmail1 gmail2 network filesystem audio date 
+
+[bar/artemis]
+; top bar
+monitor = eDP1
 bottom = false
 width = 100%
 height = 28
