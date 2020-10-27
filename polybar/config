@@ -83,7 +83,7 @@ font-4 = FontAwesome-Brands:size=12
 font-5 = FontAwesome-Solid:size=12
 
 modules-left = i3 xwindow 
-modules-right = uni1 uni2 live1 live2 gmail1 gmail2 network filesystem audio date 
+modules-right = network filesystem audio date 
 
 [bar/artemis]
 ; top bar
@@ -108,7 +108,7 @@ font-4 = FontAwesome-Brands:size=12
 font-5 = FontAwesome-Solid:size=12
 
 modules-left = i3 xwindow 
-modules-right = uni1 uni2 live1 live2 gmail1 gmail2 network filesystem audio date 
+modules-right = live1 live2 gmail1 gmail2 network filesystem audio date 
 
 
 [module/uni1]
