@@ -3,7 +3,7 @@
 set hostname = st-andrews.ac.uk
 
 
-set from = UNI_ADDR
+set from = gh66@st-andrews.ac.uk
 set sendmail = "msmtp -a uni"
 
 # set folder = "~/Mail/Uni"
@@ -12,15 +12,11 @@ set record = "+Uni/Sent"
 
 save-hook . ='Uni/'
 
-# mailboxes	"+" "+SH" \
-# 		"+CW" \
-# 		"+Church" \
-# 		"+Admin" \
-# 		"+Clutter" \
-# 		"+Sent" "+Drafts" \
-#		"+Junk" \
-
-color status yellow default
-color sidebar_divider yellow default
-color sidebar_indicator yellow default 
-color indicator yellow default
+color status brightmagenta default
+color sidebar_divider brightmagenta default
+color sidebar_indicator default brightmagenta
+color indicator default brightmagenta
+# color status brightmagenta default
+# color sidebar_divider brightmagenta default
+# color sidebar_indicator brightmagenta default 
+# color indicator brightmagenta default

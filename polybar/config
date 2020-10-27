@@ -1,13 +1,36 @@
 [colors]
-background = #1a1a1a 
-background-alt = #202020
-foreground = #bbb
-foreground-alt = #888
-line = #1a1a1a
-mid = #ff0
-bad =  #f00
-good =  #0ff
-casual = #0ff
+
+; new scheme
+; good = #32936f
+; warn = #fbaf00
+; bad = #ee6c4d
+; decor = #593c8f
+good = #14b36e 
+warn = #faaf00
+bad = #f86844
+decor = #4d14dc
+base = #000501
+etch = #d0d9e1
+mark = #e5eef7
+
+; Good: Buisness as usual
+; Warn: Item of note, out of the ordinary
+; Bad: Issue requiring action immediatly
+; Decor: Decorative marks
+; Base: background
+; Etch: unimportant marks (eg minor gridline)
+; Mark: important mark (eg text)
+
+; may increase saturation of some as they are for small marks
+
+
+background = ${self.base}
+background-alt = ${self.base}
+foreground = ${self.mark}
+foreground-alt = ${self.decor}
+line = ${self.decor}
+mid = ${self.warn}
+casual = ${self.decor}
 bar = ${self.casual}
 
 

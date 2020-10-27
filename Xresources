@@ -9,37 +9,38 @@
 *.background:   	#000000
 *.highlightColor:	#222222
 
-! black
-*.color0:       #000000
-*.color8:       #000000
+! First colour for fg, second for bg
+! black / base
+*.color0:       #000501
+*.color8:       #000501
 
-! red
-*.color1:       #e91414
-*.color9:       #e91414 
+! red / bad
+*.color1:       #f86844
+*.color9:       #f96944 
 
-! green
-*.color2:       #0ed816
-*.color10:      #0ed816
+! green / good
+*.color2:       #14b36e
+*.color10:      #14b36e
 
-! yellow
-*.color3:       #dddd00
-*.color11:      #dddd00
+! yellow / warn
+*.color3:       #faaf00
+*.color11:      #faaf00
 
-! blue
+! blue TODO
 *.color4:       #1928e3 
 *.color12:      #1928e3
 
-! magenta
-*.color5:       #fc22ca
-*.color13:      #fc22ca
+! magenta / decor
+*.color5:       #8A35F1
+*.color13:      #4d14dc
 
-! cyan
+! cyan TODO
 *.color6:       #00edd7
 *.color14:      #00edd7
 
-! white
-*.color7:       #ababab
-*.color15:      #f9f9f9
+! white / mark, etch
+*.color7:       #e5eef7
+*.color15:      #d0d9e1
 
 
 

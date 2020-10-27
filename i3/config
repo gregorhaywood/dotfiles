@@ -201,6 +201,7 @@ exec_always --no-startup-id polybar status
 exec_always --no-startup-id dunst
 exec_always --no-startup-id unclutter --timeout 1 -b 
 exec_always --no-startup-id feh --bg-scale ~/codex/bg
+exec_always --no-startup-id picom -b
 
 # Keybindings
 # bindsym $mod+e $exec $scripts/email.sh 

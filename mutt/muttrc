@@ -60,21 +60,12 @@ hdr_order from: to: cc: date: subject:  # and in this order
 # Default Inbox
 set spoolfile = "+Uni"
 # mailboxes = "+Gmail" "+Live" "+Uni"
-mailboxes	"+Gmail" "+Gmail/Sent" \
-		"+Gmail/Drafts" \
-		"+Gmail/Spam" \
-		"+Live" \
-		"+Live/SU" \
-		"+Live/Records" \
-		"+Live/Sent" \
-		"+Live/Drafts" \
-		"+Live/Spam" \
-		"+Uni" "+Uni/MSci" "+Uni/Lists" \
+mailboxes  "+Uni" "+Uni/Lists" \
 		"+Uni/PhD" "+Uni/Shire" \
 		"+Uni/Wedding" "+Uni/Church" "+Uni/Work" \
 		"+Uni/Admin" \
 		"+Uni/Sent" "+Uni/Drafts" \
-		"+Uni/Junk" \
+		"+Uni/Junk" 
 ###############
 
 set reverse_alias=yes
@@ -115,9 +106,7 @@ set sidebar_folder_indent
 set sidebar_indent_string="├──"
 
 # default sender
-folder-hook Gmail/* source ~/Mail/.config/gmail.mutt
-folder-hook Live/* source ~/Mail/.config/live.mutt
-folder-hook Uni/* source ~/Mail/.config/uni.mutt
+folder-hook Uni/* source ~/.mutt/uni.mutt
 
 # security
 source ~/dotfiles/mutt/gpg.rc
@@ -129,7 +118,6 @@ set crypt_autosign = yes
 set crypt_replysign = yes
 set crypt_replyencrypt = yes
 set crypt_replysignencrypted = yes
-set smime_ca_location="/home/mitata/certs/ca-root.crt"
 
 # Automatic Encryption
 send-hook . 'reset crypt_autoencrypt'

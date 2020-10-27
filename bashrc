@@ -41,7 +41,7 @@ alias key='setxkbmap gb'
 
 
 function meeting() {
-	printf "# Meeting on $(date "+%B %d %Y")\nIn Attendance: Gregor, $1 \n\n" > $(date +%y_%m_%d.md); vim $( date +%y_%m_%d.md);
+	printf "# Meeting on $(date "+%B %d %Y")\nIn Attendance: Gregor, $1 \n\n" >> $(date +%y_%m_%d.md); vim $( date +%y_%m_%d.md);
 }
 
 # Technically not an alias

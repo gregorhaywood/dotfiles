@@ -1,48 +1,30 @@
 --[[
-Ring Meters by londonali1010 (2009)
-+ Original Work done by Londonali1010 
-+ Modified version by Ujjwal Biswas
-
-This script draws percentage meters as rings. It is fully customisable; all options are described in the script.
-
-IMPORTANT: if you are using the 'cpu' function, it will cause a segmentation fault if it tries to draw a ring straight away. The if statement near the end of the script uses a delay to make sure that this doesn't happen. It calculates the length of the delay by the number of updates since Conky started. Generally, a value of 5s is long enough, so if you update Conky every 1s, use update_num > 5 in that if statement (the default). If you only update Conky every 2s, you should change it to update_num > 3; conversely if you update Conky every 0.5s, you should use update_num > 10. ALSO, if you change your Conky, is it best to use "killall conky; conky" to update it, otherwise the update_num will not be reset and you will get an error.
-
-To call this script in Conky, use the following (assuming that you save this script to ~/scripts/rings.lua):
-	lua_load ~/scripts/rings-v1.2.1.lua
-	lua_draw_hook_pre ring_stats
-
-    Note: To work with this Lua create a folder name .conky at your home directory and place ring lua in that folder
-
-	
-Changelog:
-+ v1.2.1 -- Fixed minor bug that caused script to crash if conky_parse() returns a nil value (20.10.2009)
-+ v1.2 -- Added option for the ending angle of the rings (07.10.2009)
-+ v1.1 -- Added options for the starting angle of the rings, and added the "max" variable, to allow for variables that output a numerical value rather than a percentage (29.09.2009)
-+ v1.0 -- Original release (28.09.2009)
-
+Draw CPUs
 ]]
+require 'cairo'
+require('colours')
 
-bg_colour=0x317BE5
+bg_colour=base
 bg_alpha=1
 
 type_info = {
     cpu = {
-        fg_colour=0xED009E,
+        fg_colour=decor,
         fg_alpha=1,
         cw=true,
         min=-20,
         max=100,
         radius=75,
-        thickness=15,
+        thickness=10,
     },
     freq = {
-        fg_colour=0x00ED9E,
+        fg_colour=decor,
         fg_alpha=1,
         cw=false,
         min=0,
         max=3800,
         radius=75,
-        thickness=15,
+        thickness=10,
     },
 }
 
@@ -183,7 +165,6 @@ cores = {
 
 }
 
-require 'cairo'
 
 function rgb_to_r_g_b(colour,alpha)
 	return ((colour / 0x10000) % 0x100) / 255., ((colour / 0x100) % 0x100) / 255., (colour % 0x100) / 255., alpha
@@ -215,11 +196,29 @@ function draw_ring(cr,value, pt, xc, yc)
         t_arc=t*(angle_f-angle_0)
     end
 
-	-- Draw background ring
-	cairo_arc(cr,xc,yc,ring_r,angle_0,angle_f)
-	cairo_set_source_rgba(cr,rgb_to_r_g_b(bgc,bga))
-	cairo_set_line_width(cr,ring_w)
-	cairo_stroke(cr)
+    -- Draw indicator etchings
+    -- Rings
+    local line_r = ring_r + 0.5*ring_w
+    for i = 0.25, 1, 0.25 do
+        cairo_arc(cr,xc,yc,i*line_r,angle_0,angle_f)
+        cairo_set_source_rgba(cr,rgb_to_r_g_b(etch,1))
+        cairo_set_line_width(cr,0.2)
+        cairo_stroke(cr)
+    end
+    -- Lines
+    -- for i = 0, 1, 0.25 do
+        cairo_line_to(cr,xc-line_r,yc)
+        cairo_line_to(cr,xc+line_r,yc)
+        cairo_set_source_rgba(cr,rgb_to_r_g_b(etch,1))
+        cairo_set_line_width(cr,0.2)
+        cairo_stroke(cr)
+    -- end
+        cairo_line_to(cr,xc,yc-line_r)
+        cairo_line_to(cr,xc,yc+line_r)
+        cairo_set_source_rgba(cr,rgb_to_r_g_b(etch,1))
+        cairo_set_line_width(cr,0.1)
+        cairo_stroke(cr)
+	
 	
 	-- Draw indicator ring
 
@@ -228,9 +227,13 @@ function draw_ring(cr,value, pt, xc, yc)
     else
         cairo_arc(cr,xc,yc,ring_r,angle_f-t_arc, angle_f)
     end
+	cairo_set_line_width(cr,ring_w)
     cairo_set_source_rgba(cr,rgb_to_r_g_b(fgc,fga))
-    cairo_stroke(cr)		
+    cairo_stroke(cr)
+
 end
+
+
 
 function conky_main()
 	local function draw_core(cr,core)
