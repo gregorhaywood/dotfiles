@@ -6,7 +6,7 @@ set $extern HDMI-1-2
 set $intern eDP1
 
 # i3 config file (v4)
-set $mod Mod4
+set $mod Mod1
 
 
 # Volume
