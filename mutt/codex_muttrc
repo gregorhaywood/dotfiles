@@ -1,6 +1,6 @@
 
 
-source ~/dotfiles/mutt/codex_muttrc
+source ~/dotfiles/mutt/default_muttrc
 
 # default sender
 folder-hook Uni/* source ~/.mutt/uni.mutt
