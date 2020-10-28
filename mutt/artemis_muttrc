@@ -1,0 +1,27 @@
+
+
+source ~/dotfiles/mutt/default_muttrc
+
+# default sender
+# folder-hook Uni/* source ~/.mutt/uni.mutt
+folder-hook Live/* source ~/.mutt/live.mutt
+folder-hook Gmail/* source ~/.mutt/gmail.mutt
+
+# Inbox Shortcuts
+macro index g <change-folder>~/Mail/Gmail<enter>
+macro index l <change-folder>~/Mail/Live<enter>
+# macro index a <change-folder>~/Mail/Uni<enter>
+
+# Default Inbox
+set spoolfile = "+Live"
+# mailboxes = "+Gmail" "+Live" "+Uni"
+mailboxes	"+Gmail" "+Gmail/Sent" \
+		"+Gmail/Drafts" \
+		"+Gmail/Spam" \
+		"+Live" \
+		"+Live/SU" \
+		"+Live/Records" \
+		"+Live/Sent" \
+		"+Live/Drafts" \
+		"+Live/Spam" \
+###############

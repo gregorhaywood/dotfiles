@@ -57,16 +57,6 @@ unhdr_order *                           # some distros order things by default
 hdr_order from: to: cc: date: subject:  # and in this order
 
 
-# Default Inbox
-set spoolfile = "+Uni"
-# mailboxes = "+Gmail" "+Live" "+Uni"
-mailboxes  "+Uni" "+Uni/Lists" \
-		"+Uni/PhD" "+Uni/Shire" \
-		"+Uni/Wedding" "+Uni/Church" "+Uni/Work" \
-		"+Uni/Admin" \
-		"+Uni/Sent" "+Uni/Drafts" \
-		"+Uni/Junk" 
-###############
 
 set reverse_alias=yes
 
@@ -105,8 +95,6 @@ set sidebar_folder_indent
 
 set sidebar_indent_string="├──"
 
-# default sender
-folder-hook Uni/* source ~/.mutt/uni.mutt
 
 # security
 source ~/dotfiles/mutt/gpg.rc
@@ -127,11 +115,6 @@ source ~/Mail/autoencrypt
 macro index,pager <Right> <sidebar-next>
 macro index,pager <Left> <sidebar-prev>
 macro index,pager / <sidebar-open>
-
-# Inbox Shortcuts
-macro index g <change-folder>~/Mail/Gmail<enter>
-macro index l <change-folder>~/Mail/Live<enter>
-macro index a <change-folder>~/Mail/Uni<enter>
 
 # HTML in browser
 macro attach b '<search>html<enter><pipe-entry>brave "data:text/html;base64,$(base64 -w 0 <&0)"<enter>'

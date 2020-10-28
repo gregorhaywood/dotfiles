@@ -1,0 +1,13 @@
+
+set from = mithrandir.greypilgrim@gmail.com
+set sendmail = "msmtp -a gmail"
+
+set postponed = "+Gmail/Drafts"
+set record = "+Gmail/Sent"
+
+save-hook . ='Gmail/'
+
+color status brightgreen default
+color sidebar_divider brightgreen default
+color sidebar_indicator default brightgreen
+color indicator default brightgreen

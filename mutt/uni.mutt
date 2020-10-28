@@ -2,7 +2,6 @@
 # send straight to users
 set hostname = st-andrews.ac.uk
 
-
 set from = gh66@st-andrews.ac.uk
 set sendmail = "msmtp -a uni"
 
@@ -16,7 +15,3 @@ color status brightmagenta default
 color sidebar_divider brightmagenta default
 color sidebar_indicator default brightmagenta
 color indicator default brightmagenta
-# color status brightmagenta default
-# color sidebar_divider brightmagenta default
-# color sidebar_indicator brightmagenta default 
-# color indicator brightmagenta default

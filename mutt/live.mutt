@@ -1,0 +1,14 @@
+
+
+set from = gregor.rogerg@live.com
+set sendmail = "msmtp -a live"
+
+set postponed = "+Live/Drafts"
+set record = "+Live/Sent"
+
+save-hook . ='Live/'
+
+color status brightmagenta default
+color sidebar_divider brightmagenta default
+color sidebar_indicator default brightmagenta
+color indicator default brightmagenta

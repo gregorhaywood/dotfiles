@@ -90,6 +90,113 @@ Expunge Both
 
 
 
+IMAPAccount live
+Host outlook.office365.com
+User gregor.rogerg@live.com
+PassCmd "gpg2 --decrypt --for-your-eyes-only --no-tty -q ~/Mail/.config/live.gpg"
+SSLType IMAPS
+SystemCertificates yes
+
+IMAPStore live-remote
+Account live
+
+MaildirStore live-local
+Path ~/Mail/Live/
+Inbox ~/Mail/Live
+
+Channel live-inbox
+Master :live-remote:Inbox
+Slave :live-local:
+Create Slave
+Expunge Both
+
+Channel live-su
+Master :live-remote:SU
+Slave :live-local:SU
+Create Slave
+Expunge Both
+
+Channel live-inbox
+Master :live-remote:Records
+Slave :live-local:Records
+Create Slave
+Expunge Both
+
+Channel live-drafts
+Master :live-remote:Drafts
+Slave :live-local:Drafts
+Create Slave
+Expunge Both
+
+Channel live-sent
+Master :live-remote:Sent
+Slave :live-local:Sent
+Create Slave
+Expunge Both
+
+Channel live-records
+Master :live-remote:Records
+Slave :live-local:Records
+Create Slave
+Expunge Both
+
+Channel live-junk
+Master :live-remote:Junk
+Slave :live-local:Spam 
+Create Slave
+Expunge Both
+
+IMAPAccount gmail
+Host imap.gmail.com 
+User mithrandir.greypilgrim@gmail.com 
+PassCmd "gpg2 --decrypt --for-your-eyes-only --no-tty -q ~/Mail/.config/gmail.gpg"
+SSLType IMAPS 
+SystemCertificates yes
+
+IMAPStore gmail-remote
+Account gmail
+
+MaildirStore gmail-local
+Path ~/Mail/Gmail/
+Inbox ~/Mail/Gmail
+
+Channel gmail-inbox
+Master :gmail-remote:INBOX
+Slave :gmail-local:
+Create Slave
+Expunge Both
+
+Channel gmail-sent
+Master :gmail-remote:"[Gmail]/Sent Mail"
+Slave :gmail-local:Sent
+Create Slave
+Expunge Both
+
+Channel gmail-draft
+Master :gmail-remote:"[Gmail]/Drafts"
+Slave :gmail-local:Drafts
+Create Slave
+Expunge Both
+
+Channel gmail-spam
+Master :gmail-remote:"[Gmail]/Spam"
+Slave :gmail-local:Spam
+Create Slave
+Expunge Both
+
+Group gmail
+Channel gmail-inbox
+Channel gmail-sent
+Channel gmail-draft
+Channel gmail-spam
+
+Group live
+Channel live-inbox
+Channel live-su
+Channel live-records
+Channel live-drafts
+Channel live-sent
+Channel live-junk
 
 Group uni
 Channel uni-inbox
