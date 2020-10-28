@@ -133,4 +133,6 @@ endfunction
 command SYM call SyntaxGroup()
 
 
+
+
 autocmd BufRead,BufNewFile *TODO set ft=markdown
