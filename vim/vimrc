@@ -5,6 +5,8 @@ set nocompatible
 filetype plugin on
 
 
+
+
 call plug#begin('~/.config/nvim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -87,6 +89,7 @@ set guicursor+=a:blinkon0
 
 set tabstop=4
 set shiftwidth=4
+set noexpandtab
 set autoindent
 set showcmd
 set swapfile
@@ -124,13 +127,15 @@ function! BSD()
 		set list
 		set listchars=tab:>-
 		set tabstop=8
+        set shiftwidth=8
+        set noexpandtab
 endfunction
 command BSD call BSD()
 
 function! SyntaxGroup()
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")') 
 endfunction
-command SYM call SyntaxGroup()
+command! SYM call SyntaxGroup()
 
 
 

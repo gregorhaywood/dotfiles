@@ -181,19 +181,16 @@ mode $conkymode {
 }
 
 # Border  
-for_window [class="^.*"] border pixel 1
-hide_edge_borders both
+for_window [class="^.*"] border pixel 4
+hide_edge_borders smart
 for_window [class="Conky"] border pixel 0
 
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #00ffff #00ffff #ffffff #00ffff   #00ffff
-client.focused_inactive #1a1a1a #1a1a1a #ffffff #1a1a1a   #1a1a1a
-client.unfocused        #1a1a1a #1a1a1a #ffffff #1a1a1a   #1a1a1a
-client.urgent           #1a1a1a #1a1a1a #ffffff #1a1a1a   #1a1a1a
-client.placeholder      #1a1a1a #1a1a1a #ffffff #1a1a1a   #1a1a1a
+client.focused          #8a35F1 #00ffff #ffffff #8a35F1  #8a35F1   
+client.focused_inactive #000501 #000501 #ffffff #000501   #000501
+client.unfocused        #000501 #000501 #ffffff #000501   #000501
 
-client.background       #1a1a1a
 
 
 # Startup applications

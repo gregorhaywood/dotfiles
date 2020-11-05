@@ -27,12 +27,12 @@
 *.color11:      #faaf00
 
 ! blue TODO
-*.color4:       #1928e3 
+*.color4:       #4d14dc 
 *.color12:      #1928e3
 
 ! magenta / decor
-*.color5:       #8A35F1
-*.color13:      #4d14dc
+*.color5:      #4d14dc
+*.color13:       #8A35F1
 
 ! cyan TODO
 *.color6:       #00edd7

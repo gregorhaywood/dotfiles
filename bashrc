@@ -24,6 +24,15 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export PATH=$PATH:~/.local/bin
 
 
+
+alias ls='ls --color=auto'
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip --color=auto'
+
+export GREP_COLORS='ms=01;4;32:mc=01;4;32:sl=:cx=:fn=35:ln=32:bn=32:se=36'
+eval "$(dircolors ~/dotfiles/dir_colors)"
+
 # Universal Aliases 
 alias python=python3
 alias py=python

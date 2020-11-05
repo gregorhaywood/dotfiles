@@ -1,15 +1,16 @@
 #!/bin/sh
 
-B='#00000000'  # blank
-CLEAR='00000066'
-C='#ffffffff'  # clear ish
-D='#00ffffcc'  # ring colour
-T=$D # '#ee00eeee'  # text
-W=$D #'#00aaffbb'  # wrong
-V='#00ffaabb'  # verifying
+B='#000501aa'   # black
+C='00050100'    # clear
+T='#8A35F1'     # text
+D='#4d14dc'     # ring colour
+H='#8A35F1'     # highlighy colour
+W='#f86844'     # wrong
+V='#14b36e'     # verifying
+
 
 i3lock \
---color=$CLEAR          \
+--color=$C        \
 --insidevercolor=$C   \
 --ringvercolor=$V     \
 \
@@ -18,7 +19,7 @@ i3lock \
 \
 --insidecolor=$B      \
 --ringcolor=$D        \
---linecolor=$B        \
+--linecolor=$C        \
 --separatorcolor=$D   \
 \
 --verifcolor=$T        \
@@ -26,10 +27,9 @@ i3lock \
 --timecolor=$T        \
 --datecolor=$T        \
 --layoutcolor=$T      \
---keyhlcolor=$W       \
+--keyhlcolor=$H       \
 --bshlcolor=$W        \
 \
---blur 1             \
 --clock               \
 --indicator           \
 --timestr="%H:%M:%S"  \
@@ -44,3 +44,6 @@ i3lock \
 # --timefont=comic-sans
 # --datefont=monofur
 # etc
+
+
+i3-msg workspace 99-conky

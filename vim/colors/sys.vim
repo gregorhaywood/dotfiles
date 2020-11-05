@@ -11,7 +11,7 @@ set background="dark"
 " : help syntax.txt
 
 highlight Comment cterm=italic ctermfg=6
-highlight Constant ctermfg=5
+highlight Constant ctermfg=13
 
 highlight Identifier ctermfg=6 
 highlight Function cterm=bold ctermfg=6

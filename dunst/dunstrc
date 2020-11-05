@@ -1,6 +1,6 @@
 [global]
 	# font and format
-    font = "FantasqueSansMono-Regular 12"
+    font = "FantasqueSansMono-Regular 14"
     allow_markup = yes
     format = "<b>%a\n</b>%s\n%b"
     alignment = center
@@ -37,23 +37,21 @@
 [shortcuts]
     close = ctrl+space
     close_all = ctrl+shift+space
-    history = ctrl+grave
-    context = ctrl+shift+period
 
 [urgency_low]
-    frame_color = "#00ff00"
-    foreground = "#bbbbbb"
-    background = "#1a1a1a"
+    frame_color = "#14b36e"
+    foreground = "#e5eef7"
+    background = "#000501"
     timeout = 10
 
 [urgency_normal]
-    foreground = "#bbbbbb"
-    background = "#1a1a1a"
-    frame_color = "#00ff00"
+    frame_color = "#4d14dc"
+    foreground = "#e5eef7"
+    background = "#000501"
     timeout = 20
 
 [urgency_critical]
-    foreground = "#bbbbbb"
-    background = "#1a1a1a"
-    frame_color = "#ff0000"
+    frame_color = "#f86844"
+    foreground = "#e5eef7"
+    background = "#000501"
     timeout = 0
