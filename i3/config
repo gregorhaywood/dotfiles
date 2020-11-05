@@ -2,7 +2,7 @@ set $i3 ~/dotfiles/i3
 set $scripts ~/dotfiles/scripts
 set $exec exec --no-startup-id
 
-set $extern HDMI-1-0
+set $extern HDMI-1-2
 set $intern eDP1
 set $codex HDMI-4
 
@@ -110,6 +110,9 @@ workspace $ws8 output $intern
 workspace $ws9 output $intern
 
 
+
+
+
 bindsym $mod+q workspace $ws4
 bindsym $mod+w workspace $ws5
 bindsym $mod+e workspace $ws6
@@ -167,6 +170,8 @@ bindsym $mod+Control+Shift+l $exec $i3/i3lock.sh hibernate
 
 # Conky
 set $conky "99-conky"
+workspace $conky output $intern
+
 set $conkymode "Conky"
 for_window [class="Conky"]  floating enable
 no_focus [class="Conky"]
@@ -204,8 +209,6 @@ exec_always --no-startup-id feh --bg-scale ~/$HOSTNAME/bg
 exec_always --no-startup-id picom -b
 
 # Keybindings
-# bindsym $mod+e $exec $scripts/email.sh 
-bindsym $mod+p $exec $scripts/psTree.sh
 
 bindsym $mod+Shift+h move workspace to output $extern
 bindsym $mod+Shift+g move workspace to output primary
