@@ -1,5 +1,5 @@
 text/html; lynx -dump %s; nametemplate=%s.html; copiousoutput
-application/pdf; zathura %s
+application/pdf; i3-swallow atril %s
 image/*; feh %s ; test= [[ $DISPLAY ]]
 application/vnd.openxmlformats-officedocument.wordprocessingml.document;libreoffice %s
 application/vnd.openxmlformats-officedocument.wordprocessingml.template;libreoffice %s

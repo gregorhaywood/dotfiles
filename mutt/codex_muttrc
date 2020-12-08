@@ -1,5 +1,7 @@
 
 
+set new_mail_command="dunstify -a 'Mutt' 'New Email'"
+
 source ~/dotfiles/mutt/default_muttrc
 
 # default sender

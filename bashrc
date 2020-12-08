@@ -10,6 +10,9 @@
 # It will also define $PATH if it is not the default.
 
 
+# Search history on arrows
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
 
 
 # Source global definitions
@@ -21,8 +24,10 @@ fi
 # assumed config dir
 export XDG_CONFIG_HOME="$HOME/.config"
 
-export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/bin
 
+alias atril='i3-swallow atril'
+alias libreoffice='i3-swallow libreoffice'
 
 
 alias ls='ls --color=auto'

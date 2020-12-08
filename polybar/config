@@ -83,7 +83,7 @@ font-4 = FontAwesome-Brands:size=12
 font-5 = FontAwesome-Solid:size=12
 
 modules-left = i3 xwindow 
-modules-right = network filesystem audio date 
+modules-right = network_c filesystem audio date 
 
 [bar/artemis]
 ; top bar
@@ -108,7 +108,7 @@ font-4 = FontAwesome-Brands:size=12
 font-5 = FontAwesome-Solid:size=12
 
 modules-left = i3 xwindow 
-modules-right = live1 live2 gmail1 gmail2 network filesystem audio date 
+modules-right = live1 live2 gmail1 gmail2 network_a_e network_a_w  filesystem audio battery date 
 
 
 [module/uni1]
@@ -127,28 +127,28 @@ format-underline =  ${colors.bad}
 
 [module/live1]
 type = custom/script
-exec = echo 'L '
+exec = echo ' '
 exec-if = ~/dotfiles/polybar/check.py live up 
 interval = 600
 format-underline =  ${colors.good} 
 
 [module/live2]
 type = custom/script
-exec = echo 'L '
+exec = echo ' '
 exec-if = ~/dotfiles/polybar/check.py live down 
 interval = 600
 format-underline =  ${colors.bad} 
 
 [module/gmail1]
 type = custom/script
-exec = echo 'G '
+exec = echo ' '
 exec-if = ~/dotfiles/polybar/check.py gmail up 
 interval = 600
 format-underline =  ${colors.good} 
 
 [module/gmail2]
 type = custom/script
-exec = echo 'G '
+exec = echo ' '
 exec-if = ~/dotfiles/polybar/check.py gmail down 
 interval = 600
 format-underline =  ${colors.bad} 
@@ -188,7 +188,7 @@ ws-icon-5 = 6;6
 ws-icon-6 = 7;7
 ws-icon-7 = 8;8
 ws-icon-8 = 9;9
-ws-icon-9 = 10;HDMI
+ws-icon-9 = 10;
 ws-icon-10 = 99-conky;C
 ws-icon-default = 
 format-underline = ${colors.line}
@@ -212,7 +212,7 @@ label-unfocused-padding = ${self.padding}
 
 ; visible = Active workspace on unfocused page
 label-visible = %icon%
-label-visible-underline = ${colors.line}
+label-visible-underline = ${colors.good}
 label-visible-padding = ${self.padding}
 
 ; urgent = Workspace with urgency hint set
@@ -246,12 +246,32 @@ bar-empty-font = 2
 bar-empty-foreground = ${colors.background}
 bar-empty-underline = ${colors.background}
 
-[module/network]
+[module/network_c]
 type = internal/network 
 interface = enp3s0
 interval = 1.0
+label-connected = 
+label-disconnected = 
+format-connected-underline = ${colors.good}
+format-disconnected-underline = ${colors.bad}
+format-padding = 1
+
+[module/network_a_w]
+type = internal/network 
+interface = wlo1
+interval = 1.0
 label-connected = 
 label-disconnected = 
+format-connected-underline = ${colors.good}
+format-disconnected-underline = ${colors.bad}
+format-padding = 1
+
+[module/network_a_e]
+type = internal/network 
+interface = enp2s0
+interval = 1.0
+label-connected = 
+label-disconnected = 
 format-connected-underline = ${colors.good}
 format-disconnected-underline = ${colors.bad}
 format-padding = 1
@@ -286,12 +306,12 @@ master-mixer = Master
 ; headphone-id = 1
 
 ; Only applies if <ramp-volume> is used
-ramp-volume-0 = S
+ramp-volume-0 = 
 ramp-headphones-0 = 
 ramp-headphones-underline = ${colors.good}
 
 format-muted = <label-muted><bar-volume>
-label-muted = M
+label-muted = 
 label-muted-foreground = ${colors.foreground}
 
 ramp-volume-underline = ${colors.good}
@@ -301,10 +321,10 @@ bar-volume-width = 10
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-foreground = ${colors.background}
-bar-volume-indicator-underline = ${colors.bar}
+bar-volume-indicator-underline = ${colors.good}
 bar-volume-fill = ─
 bar-volume-fill-foreground = ${colors.background}
-bar-volume-fill-underline = ${colors.bar}
+bar-volume-fill-underline = ${colors.good}
 bar-volume-empty = ─
 bar-volume-empty-foreground = ${colors.background}
 bar-volume-empty-underline = ${colors.line}

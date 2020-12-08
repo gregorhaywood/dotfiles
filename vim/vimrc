@@ -4,7 +4,8 @@ autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 
 set nocompatible
 filetype plugin on
 
-
+" Polyglot messes up FreeBSD indentation, etc.
+let g:polyglot_disabled = ['autoindent']
 
 
 call plug#begin('~/.config/nvim/plugged')
@@ -16,12 +17,14 @@ Plug 'dense-analysis/ale'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
+
+
 " ale linter options
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 
-nmap <silent> <C-q> <Plug>(ale_previous_wrap)
-nmap <silent> <C-w> <Plug>(ale_next_wrap)
+" nmap <silent> <C-q> <Plug>(ale_previous_wrap)
+" nmap <silent> <C-w> <Plug>(ale_next_wrap)
 
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
@@ -79,18 +82,16 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 map <C-n> :NERDTreeToggle<CR>
 
 " Split movement
-nnoremap <C-J> <C-W><C-K>
-nnoremap <C-K> <C-W><C-J>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" nnoremap <C-J> <C-W><C-K>
+" nnoremap <C-K> <C-W><C-J>
+" nnoremap <C-L> <C-W><C-L>
+" nnoremap <C-H> <C-W><C-H>
 
 set guicursor=a:hor100
 set guicursor+=a:blinkon0
 
-set tabstop=4
-set shiftwidth=4
-set noexpandtab
-set autoindent
+
+
 set showcmd
 set swapfile
 
@@ -120,17 +121,16 @@ set mouse=v
 function! MAKE()
         let result = system("make > /dev/null &")
 endfunction
-command M call MAKE()
+command! M call MAKE()
 
 " BSD style mode
 function! BSD()
 		set list
-		set listchars=tab:>-
 		set tabstop=8
-        set shiftwidth=8
+        " set shiftwidth=8
         set noexpandtab
 endfunction
-command BSD call BSD()
+command! BSD call BSD()
 
 function! SyntaxGroup()
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")') 
@@ -141,3 +141,11 @@ command! SYM call SyntaxGroup()
 
 
 autocmd BufRead,BufNewFile *TODO set ft=markdown
+
+
+set autoindent
+" set listchars=tab:>-
+set list
+set noexpandtab
+set shiftwidth=4
+set tabstop=8
