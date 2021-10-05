@@ -1,0 +1,95 @@
+# syntax
+
+constant = {fg="cyan", modifiers=["bold"]}
+"constant.builtin" = {fg="yellow", modifiers=["bold"]}
+# XXX: until updated
+escape = {fg = "etch", modifiers = ["dim"]}
+number = "etch"
+string = "etch"
+"string.special" = {fg = "etch", modifiers=["dim"]}
+
+
+variable = "cyan"
+"variable.builtin"  = {fg = "cyan", modifiers = ["bold"]}
+
+keyword = {fg = "yellow", modifiers = ["bold"]}
+"keyword.directive" = {fg = "yellow", modifiers = ["bold", "dim"]}
+comment = {fg="etch", modifiers = ["dim"] }
+punctuation = {fg="purple", modifiers = []}
+operator = {fg="purple", modifiers = ["bold"]}
+
+function = "green"
+"function.builtin" = {fg="green", modifiers = ["bold"]}
+"function.special" = {fg="green", modifiers = ["bold"]}
+namespace = {fg = "blue", modifiers = ["bold"]}
+
+type = "red"
+"type.builtin" = {fg = "red", modifiers = ["bold"]}
+constructor = {fg="red",modifiers=["bold"]}
+
+attribute = {fg="yellow",modifiers=["dim"]}
+
+# old
+label = {fg="cyan", modifiers = ["bold"]}
+# special = "red"
+property = "blue"
+# tag = "blue"
+
+# UI
+
+diagnostic = { modifiers = ["underlined"] }
+warning = {fg="yellow"}
+error = {fg="red", modifiers=["bold"]}
+info = "etch"
+hint = "green"
+
+"ui.text" = { fg = "purple" } 
+"ui.text.focus" = { fg = "faintetch" }
+
+"ui.background" = { bg = "bg" }
+"ui.statusline" = { fg = "black", bg = "uibg"} 
+"ui.statusline.inactive" = { fg = "black", bg = "faintetch", modifiers=["dim"]} 
+
+"ui.linenr" = { fg = "faintetch", modifiers = ["dim"] }
+"ui.linenr.selected" = { fg = "mark"}
+
+"ui.popup" = { bg = "uibg", fg = "black" }
+"ui.help" = { bg = "uibg", fg = "black" }
+
+"ui.menu.selected" = { fg = "black", bg = "blue" }
+
+# Normally invert colours to show cursor
+"ui.cursor" = { modifiers = ["reversed"] }
+"ui.cursor.match" = { bg = "faintetch" }
+"ui.cursor.select" = { bg = "select" }
+# "ui.cursor.insert" = { bg = "red" }
+
+#old
+
+"ui.window" = { fg = "faintetch" }
+
+"ui.selection" = { bg = "#510000" }
+"ui.selection.primary" = { bg = "#510099" }
+# TODO: namespace ui.cursor as ui.selection.cursor?
+"ui.highlight" = { modifiers = ["bold"]} 
+
+"ui.menu" = { fg = "black", bg = "yellow" }
+
+
+[palette]
+black = "#000501"
+red = "#f86844"
+green = "#14b36e"
+yellow = "#faaf00"
+blue = "#8476EA" # TODO
+purple = "#8a35f1"
+cyan = "#00edd7" # TODO
+mark = "#e5eef7"
+etch = "#d0d9e1"
+faintetch = "#7c8184"
+
+bg = "#191d1e"
+uibg = "#2ab2b2"
+
+select = "#6F44F0"
+

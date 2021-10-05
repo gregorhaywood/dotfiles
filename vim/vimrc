@@ -1,4 +1,8 @@
 
+" Vim and neovim should ignore viminfo
+set shada="NONE"
+set viminfo="NONE"
+
 autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif 
 
 set nocompatible
@@ -43,9 +47,9 @@ if !exists('g:airline_symbols')
 endif
 
 let g:airline_left_sep=''
-let g:airline_right_sep = ''
+let g:airline_right_sep = '' " 
 let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline_symbols.linenr='Line:'
 let g:airline_symbols.maxlinenr=''
 

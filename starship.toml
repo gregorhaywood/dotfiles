@@ -1,0 +1,88 @@
+# Which is equivalent to
+format = """
+$hostname\
+$shlvl\
+$kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$hg_branch\
+$docker_context\
+$package\
+$cmake\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$kotlin\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$purescript\
+$python\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$env_var\
+$crystal\
+$custom\
+$line_break\
+$lua\
+$jobs\
+$battery\
+$time\
+$status\
+$shell\
+$character"""
+
+add_newline = false
+command_timeout = 500
+[character]
+success_symbol ="[➜](bold green)"
+error_symbol = 	"[➜](bold red)"
+
+[hostname]
+format =  "[$hostname](bold purple) "
+
+[directory]
+format ="\\[ [$path]($style) [$read_only]($read_only_style)\\] "
+style = "bold white"
+truncate_to_repo = true
+read_only_style = "red"
+
+[line_break]
+disabled = true
+
+[git_branch]
+format = "[\\[$branch\\]]($style) "
+style = "green"
+
+[rust]
+format = "[ $version]($style)"
+version_format = "${raw}"
+style = "yellow bold"
+
+[package]
+format = "[$version]($style) "
+style = "yellow bold"
+version_format = "${major}.${minor}"

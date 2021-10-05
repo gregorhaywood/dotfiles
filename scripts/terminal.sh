@@ -1,2 +1,2 @@
 #!/bin/bash
-urxvt -cd $(xcwd) &
+alacritty --working-directory $(xcwd) &
