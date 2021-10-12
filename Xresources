@@ -36,8 +36,8 @@
 *.color13:	#8A35F1
 
 ! cyan TODO
-*.color6:       #00edd7
-*.color14:      #00edd7
+*.color6:       #2ab2b2
+*.color14:       #2ab2b2
 
 ! white / mark, etch
 *.color7:       #e5eef7

@@ -1,2 +1,3 @@
 #!/bin/bash
-alacritty --working-directory $(xcwd) &
+# alacritty --working-directory $(xcwd) && alacritty &
+alacritty &

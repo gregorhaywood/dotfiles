@@ -1,0 +1,26 @@
+
+# TODO: make systemd reload things using `/usr/bin/newsboat -x reload`
+# then remove this
+auto-reload yes
+
+
+reload-threads 20
+
+# Optionally define macros to open different files differently
+browser "brave %u"
+
+# Colours
+# highlight feedlist "---.*---" default default bold
+
+highlight feedlist ".*[0-9]/[0-9].." default default dim
+highlight feedlist ".*0/0.." default default invis
+# highlight feedlist ".$" default default invis
+
+color listnormal          white   default
+color listfocus           black  blue
+
+color listnormal_unread   green default
+color listfocus_unread    black green
+
+color info                black   blue   bold
+

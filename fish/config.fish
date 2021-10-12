@@ -2,6 +2,12 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+set TTY1 (tty)
+if test -z "$DISPLAY"; and test $TTY1 = "/dev/tty1"
+  exec sway
+end
+
+
 starship init fish | source
 export XDG_CONFIG_HOME="$HOME/.config"
 
