@@ -3,7 +3,6 @@ theme = "sys"
 
 [editor]
 shell = ["fish"]
-line-number = "relative"
 
 [lsp]
 display-messages = true

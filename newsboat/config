@@ -9,6 +9,8 @@ reload-threads 20
 # Optionally define macros to open different files differently
 browser "brave %u"
 
+
+
 # Colours
 # highlight feedlist "---.*---" default default bold
 
