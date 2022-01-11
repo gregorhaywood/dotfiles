@@ -29,6 +29,16 @@ constructor = {fg="red",modifiers=["bold"]}
 
 attribute = {fg="yellow",modifiers=["dim"]}
 
+# Markup Formating
+markup = {fg = "etch"}
+"markup.heading" = {fg = "etch", modifiers = ["bold"]}
+"markup.list.unnumbered" = {fg = "etch"}
+"markup.bold" = {fg = "mark", modifiers = ["bold"]}
+"markup.italic" = {fg = "mark", modifiers = ["italic"]}
+"markup.raw" = {fg = "mark", modifiers = ["bold"]}
+
+document = {fg = "mark"}
+
 # old
 label = {fg="cyan", modifiers = ["bold"]}
 # special = "red"
@@ -43,7 +53,8 @@ error = {fg="red", modifiers=["bold"]}
 info = "etch"
 hint = "green"
 
-"ui.text" = { fg = "purple" } 
+# "ui.text" = { fg = "purple" } 
+"ui.text" = { fg = "mark" } 
 "ui.text.focus" = { fg = "faintetch" }
 
 "ui.background" = { bg = "bg" }
