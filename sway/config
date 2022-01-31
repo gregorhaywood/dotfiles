@@ -179,7 +179,8 @@ bindsym $mod+Control+l $exec $scripts/lock.fish suspend
 # bindsym $mod+Control+Shift+l $exec $scripts/lock.fish hibernate
 
 # Border  
-hide_edge_borders smart
+# hide_edge_borders smart
+smart_borders on
 # class                 border  backgr. text    indicator child_border
 client.focused          #8a35F1 #00ffff #ffffff #8a35F1  #8a35F1   
 client.focused_inactive #000501 #000501 #ffffff #000501   #000501
