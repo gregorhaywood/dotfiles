@@ -27,7 +27,7 @@ alias py=python
 alias venv='. venv/bin/activate'
 alias vim='nvim'
 
-fish_add_path ~/bin
+fish_add_path ~/bin/
 fish_add_path ~/.cargo/bin
 set -g fish_greeting
 
