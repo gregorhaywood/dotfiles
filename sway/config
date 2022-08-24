@@ -20,9 +20,8 @@ input type:touchpad {
 }
 output $intern pos 0 0
 output $extern pos 1920 0
-output * {
-	bg ~/artemis/bg stretch
-}
+output * bg ~/artemis/bg fill
+
 default_border pixel 2
 xwayland enable
 

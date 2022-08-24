@@ -4,6 +4,4 @@ theme = "sys"
 [editor]
 shell = ["fish"]
 
-[lsp]
-display-messages = true
 
