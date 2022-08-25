@@ -1,12 +1,22 @@
 [global]
+    layer = "overlay"
+    follow = "keyboard"
+    origin = "center"
+    width = "320"
+    frame_width = "0"
+    height = "320"
+    profress_bar = "true"
+    corner_radius = "10"
+    icon_theme = "Adwaita"    
+    enable_recursive_icon_lookup = "true"
+
 	# font and format
     font = "FantasqueSansMono-Regular 14"
     allow_markup = yes
-    format = "<b>%a\n</b>%s\n%b"
+    # format = "<b>%a\n</b>%s\n%b\n%p"
     alignment = center
     word_wrap = yes
     ignore_newline = no
-    transparency = 0
     show_age_threshold = 60 # show age of old messages
 
 	# ordering
@@ -17,9 +27,6 @@
 	idle_threshold = 0	
 
 	# size and monitor to use
-    geometry = "300x5-0+28"
-	monitor = 0				
-    follow = none
     
 	# no line seperating
 	line_height = 0
@@ -38,20 +45,38 @@
     close = ctrl+space
     close_all = ctrl+shift+space
 
+# Notifications that can be ignored
 [urgency_low]
     frame_color = "#14b36e"
     foreground = "#e5eef7"
     background = "#000501"
     timeout = 10
 
+# Things that should remain visible until dismissed
 [urgency_normal]
     frame_color = "#4d14dc"
     foreground = "#e5eef7"
     background = "#000501"
     timeout = 20
 
+# Things that should always be visible
 [urgency_critical]
     frame_color = "#f86844"
     foreground = "#e5eef7"
     background = "#000501"
     timeout = 0
+    
+    
+# Volume notifications
+[volume]
+    category = "sound"
+    background = "#d0d9e1aa"
+    highlight = "#e5eef7"
+    foreground = "#e5eef7"
+    hide_text = "true"
+    set_stack_tag = "sound"
+    history_ignore = "true"
+    timeout = 1
+    icon_position = "top"
+    min_icon_size = "128"
+    max_icon_size = "256"
