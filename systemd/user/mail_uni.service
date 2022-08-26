@@ -1,7 +1,0 @@
-[Unit]
-Description=Uni Mail Synchronization service
-
-[Service]
-Type=oneshot
-; - because script return non-zero (eg, no connection)
-ExecStart=-/home/mitata/dotfiles/scripts/email.sh uni

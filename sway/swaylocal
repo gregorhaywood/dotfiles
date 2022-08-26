@@ -1,0 +1,19 @@
+
+# Artemis
+#set $left eDP-1
+#set $right HDMI-A-3
+#output $left pos 0 0
+#output $right pos 1920 0
+# output * bg ~/artemis/bg fill
+
+# Codex
+#set $right HDMI-4
+#set $left HDMI-1-1
+# output * bg ~/codex/bg fill
+
+
+# Labs:
+
+
+
+# NOTE: per-workspace BGs don't work

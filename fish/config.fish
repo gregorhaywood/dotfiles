@@ -7,12 +7,11 @@ if test -z "$DISPLAY"; and test $TTY1 = "/dev/tty1"
   exec sway
 end
 
-
 starship init fish | source
 export XDG_CONFIG_HOME="$HOME/.config"
 
-alias atril='i3-swallow atril'
-alias libreoffice='i3-swallow libreoffice'
+# alias atril='i3-swallow atril'
+# alias libreoffice='i3-swallow libreoffice'
 
 alias ls='ls --color=auto'
 alias diff='diff --color=auto'
@@ -24,8 +23,6 @@ export GREP_COLORS='ms=01;4;32:mc=01;4;32:sl=:cx=:fn=35:ln=32:bn=32:se=36'
 alias reboot='echo This machine is $hostname'
 alias py=python
 # alias pip='python3 -m pip'
-alias venv='. venv/bin/activate'
-alias vim='nvim'
 
 fish_add_path ~/bin/
 fish_add_path ~/.cargo/bin

@@ -1,7 +1,0 @@
-[Unit]
-Description=Mail Synchronization service
-
-[Service]
-Type=oneshot
-; - because may return non-zero (eg, no connection)
-ExecStart=-/usr/bin/mbsync uni

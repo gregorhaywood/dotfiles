@@ -1,24 +1,35 @@
 # dotfiles
 
-Dotfiles. You know the deal.
 
-Fish: symlink the tw files in .config/fish
-Helix: symlink the directory
-Alacritty: symlink the file in .config
-Starship: symlink the file in .config
-Sway: symlink the directory
+## Config Files
 
-swaylock should be replaced with swaylock-effects-git from AUR
+Config files in ~/.config:
 
-NOTE: Sway is currently failing to exec fish scripts -- cause unknown
+* Fish: symlink the two files from .config/fish
+* Helix: link dir
+* Alacritty: link file
+* Starship: link file
+* Sway: link dir
+* Brave: link file
+* Dunst: link dir
+* Systemd: link dir
+* Bottom: link dir
 
-Brave requres the flags set in .config/brave-flags.conf
+## AUR
 
+* brave-bin
+* swaylock-effects-git
 
-TODO:
-* dunst // notify
-* SSH keys
-* Update nudges
-* dotfiles cleanup
-* GTK, etc. standardising
-* Sound
+texcount
+
+## TODO
+
+* Confirm upgrade nudge works, change timer to 5 days, and inform
+  systems that all is up and running
+* Add new volume modifier keys
+* Set up backups
+  * Ideally with remote access to my server
+  * Potentially extend it to a remote file system
+* Why does sway fail to run fish scripts?
+* Enhance Sway config
+* Swayidle for auto-locking?

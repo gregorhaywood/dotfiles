@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = *
+
+[Action]
+Description = Start a timer to prompt future upgrades
+When = PostTransaction
+Exec = /usr/bin/touch /etc/pacman.d/updatetracker

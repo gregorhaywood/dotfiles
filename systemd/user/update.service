@@ -1,0 +1,8 @@
+[Unit]
+Description=Update prompt
+
+[Service]
+ExecStart=/home/gregor/dotfiles/scripts/updateClock.sh
+
+[Install]
+WantedBy=default.target

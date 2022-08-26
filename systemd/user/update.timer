@@ -1,0 +1,10 @@
+[Unit]
+Description=Prompt upgrades
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+Unit=update.service
+
+[Install]
+WantedBy=timers.target
