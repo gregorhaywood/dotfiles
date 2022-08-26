@@ -1,6 +1,6 @@
-#!/bin/fish
-
-function lock
+#!/bin/bash
+# function
+lock () {
 	swaylock -f --screenshot \
 		--effect-blur 5x5 \
 		--effect-vignette 0:1 \
@@ -26,20 +26,21 @@ function lock
 		--line-ver-color 00000000 \
 		--line-wrong-color 00000000 \
 		--fade-in 0.2
-end
+}
 
-notify-send "hi"
-notify-send id
-# notify-send $argv
-# switch $argv
-# 	case lock
-# 		lock
-# 	case suspend
-# 		lock; systemctl suspend
-# 	case hibernate
-# 		lock && sleep 1; systemctl hibernate
-# 	case "*"
-#         echo "Usage: $0 {lock|suspend|hibernate}"
-#         exit 2
-# end
+case $1 in
+	lock)
+		lock
+		;;
+	suspend)
+		lock; systemctl suspend
+		;;
+	hibernate)
+		lock && sleep 1; systemctl hibernate
+		;;
+	*)
+        echo "Usage: $0 {lock|suspend|hibernate}"
+        exit 2
+				;;
+esac
 

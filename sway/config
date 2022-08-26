@@ -20,7 +20,7 @@ input type:touchpad {
 }
 output $intern pos 0 0
 output $extern pos 1920 0
-output * bg ~/artemis/bg fill
+# output * bg ~/artemis/bg fill
 
 default_border pixel 2
 xwayland enable
@@ -173,7 +173,10 @@ mode "resize" {
 }
 
 # Lockscreen Shortcuts 
-bindsym $mod+l $exec $scripts/lock.fish lock
+bindsym $mod+l $exec $scripts/lock.sh lock
+#bindsym $mod+l $exec ~/lock.fish lock
+#bindsym $mod+l $exec ~/test.sh
+#bindsym $mod+l $exec notify-send $scripts # exec $scripts/lock.fish lock
 bindsym $mod+Control+l $exec $scripts/lock.fish suspend
 # bindsym $mod+Control+Shift+l $exec $scripts/lock.fish hibernate
 

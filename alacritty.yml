@@ -104,7 +104,8 @@
 # Font configuration
 font:
   normal:
-    family: Drafting*Mono
+    # family: Drafting*Mono
+    family: Hermit
     # family: FantasqueSansMono
     # style: Regular
     style: Medium
