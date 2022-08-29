@@ -5,7 +5,7 @@
 
 Config files in ~/.config:
 
-* Fish: symlink the two files from .config/fish
+* Fish: symlink the directory
 * Helix: link dir
 * Alacritty: link file
 * Starship: link file

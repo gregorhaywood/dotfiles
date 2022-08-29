@@ -24,7 +24,7 @@ alias reboot='echo This machine is $hostname'
 alias py=python
 # alias pip='python3 -m pip'
 
-fish_add_path ~/bin/
-fish_add_path ~/.cargo/bin
+#fish_add_path ~/bin/
+#fish_add_path ~/.cargo/bin
 set -g fish_greeting
 
