@@ -87,7 +87,7 @@ bindsym $mod+Shift+e move container to workspace $ws6
 bindsym $mod+Shift+r $exec swaymsg reload
 
 # Border  
-default_border pixel 2
+default_border pixel 4
 smart_borders on
 smart_gaps on
 floating_modifier $mod
@@ -96,7 +96,9 @@ force_display_urgency_hint 100
 
 # class                 title   title   title   "new"	  normal
 #						border  bg		text	border	  border
-client.focused          #8a35F1 #00ffff #ffffff #00ffff   #8a35F1   
+#client.focused          #8a35F1 #00ffff #ffffff #00ffff   #8a35F1   
+#client.unfocused        #000501 #000501 #ffffff #000501   #000501
+client.focused          #8a35F1 #00ffff #ffffff #ff6e27   #73fffe   
 client.unfocused        #000501 #000501 #ffffff #000501   #000501
 # client.focused_inactive
 # client.focused_tab_title
