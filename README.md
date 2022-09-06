@@ -12,6 +12,7 @@
 * Dunst: link dir
 * Systemd: link dir
 * Bottom: link dir
+* Sirula: link dir
 
 Config files going elsehere:
 
@@ -24,17 +25,16 @@ Config files going elsehere:
 
 * brave-bin
 * swaylock-effects-git
+* wev
 
 texcount
 
 ## TODO
 
-* Confirm upgrade nudge works, change timer to 5 days, and inform
-  systems that all is up and running
-* Add new volume modifier keys
 * Set up backups
   * Ideally with remote access to my server
   * Potentially extend it to a remote file system
 * Why does sway fail to run fish scripts?
 * Enhance Sway config
-* Swayidle for auto-locking?
+* Integrate calander and comms with notifications
+* Set up Matrix for collective logging

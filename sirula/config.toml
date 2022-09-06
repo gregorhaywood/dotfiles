@@ -1,0 +1,57 @@
+
+# Positioning
+exclusive = true
+
+anchor_left = false
+anchor_right = false
+anchor_top = false
+anchor_bottom = false
+
+margin_top = 1
+margin_bottom = 0
+margin_left = 0
+margin_right = 0
+
+width = -1
+height = -1
+
+# App Entries
+lines = 1
+icon_size = 32
+recent_first=false
+frequent_first=true
+
+## Formating entries
+markup_default = ''
+markup_extra = ''
+# TODO
+markup_highlight = 'foreground="red" underline="single"'
+extra_field = []
+
+# Things to ignore
+exclude =[
+  # "nonsense"
+  "avahi-discover.desktop",
+  "bssh.desktop",
+  "bvnc.desktop",
+  "qv4l2.desktop",
+  "qvidcap.desktop",
+  "lstopo.desktop",
+  # Launched by other means
+  "Alacritty.desktop",
+  "fish.desktop",
+  # ".desktop",
+]
+
+[name_overrides]
+"atril"="Atril"
+"pavucontrol"="Volume"
+"libreoffice-base"="Database"
+"libreoffice-calc"="Calculator"
+"libreoffice-draw"="Draw"
+"libreoffice-impress"="Impress"
+"libreoffice-math"="Math"
+"libreoffice-startcenter"="Libreoffice"
+"libreoffice-writer"="Writer"
+
+

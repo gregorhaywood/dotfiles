@@ -124,8 +124,12 @@ bindsym XF86AudioRaiseVolume $exec $scripts/sound.sh up
 bindsym XF86AudioLowerVolume $exec $scripts/sound.sh down
 bindsym XF86AudioMute        $exec $scripts/sound.sh mute
 
+bindsym Menu+F3 $exec $scripts/sound.sh up
+bindsym Menu+F2 $exec $scripts/sound.sh down
+bindsym Menu+F1 $exec $scripts/sound.sh mute
+
 ## Launch/kill applications
-bindsym $mod+F1 $exec bemenu-run
+bindsym $mod+F1 $exec sirula
 bindsym $mod+F2 $exec brave
 bindsym $mod+Return $exec alacritty
 bindsym $mod+Shift+x kill

@@ -5,6 +5,10 @@ function vol {
     amixer get Master | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1
 }
 
+function isMute {
+    amixer get Master | grep '%' | head -n 1 | cut -d '[' -f 4 | cut -d ']' -f 1
+}
+
 up() {
 	amixer set Master 3%+
 	volume=`vol`
@@ -19,14 +23,23 @@ down() {
 
 
 mute() {
-	(amixer get Speaker | grep off > /dev/null && 
-		amixer -q set Master toggle && 
-		amixer -q set Headphone unmute) || 
-		(amixer -q set Master toggle && 
-		amixer -q set Speaker unmute)
-	volume=`vol`
 	
-	notify-send -i "audio-volume-muted-symbolic" -c sound -h "INT:value:$volume" "sound"
+	# amixer set Master toggle
+	volume=`vol`
+	case `isMute` in
+		on)
+			amixer set Headphone mute
+			amixer set Master mute
+			sym="audio-volume-muted-symbolic"
+			;;
+		off)
+			amixer set Headphone unmute
+			amixer set Master unmute
+			sym="audio-volume-high-symbolic"
+			;;
+	esac
+	
+	notify-send -i $sym -c sound -h "INT:value:$volume" "sound"
 }
 
 case "$1" in
