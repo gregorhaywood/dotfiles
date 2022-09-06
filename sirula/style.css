@@ -59,10 +59,9 @@ To remove the global theme completely, use
 
 #app-list {
   margin: 0 15 15 0;
-  border-style: double solid;
+  border-style: solid;
   border-color: cyan;
-  border-width: 0px 1px 6px 0px;
-  border-radius: 0 0 10 0;
+  border-width: 0px 1px 1px 0px;
 }
 
 
