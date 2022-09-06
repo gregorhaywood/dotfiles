@@ -38,3 +38,8 @@ texcount
 * Enhance Sway config
 * Integrate calander and comms with notifications
 * Set up Matrix for collective logging
+
+* Convert Helix theme to source colours from terminal
+  * Also make sure I set these to what I want
+  * This avoids problems when true color isn't supported
+  * I can do this by just using the 16 named colours

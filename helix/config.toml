@@ -5,3 +5,15 @@ theme = "sys"
 shell = ["fish"]
 
 
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+center = []
+right = ["diagnostics", "position", "file-encoding", "file-type"]
+separator = "|"
+
+[editor.cursor-shape]
+insert = "underline"
+
+# Make this language-specific?
+[editor.indent-guides]
+render = true
