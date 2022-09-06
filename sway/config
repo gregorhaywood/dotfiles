@@ -100,7 +100,7 @@ force_display_urgency_hint 100
 #client.unfocused        #000501 #000501 #ffffff #000501   #000501
 client.focused          #8a35F1 #00ffff #ffffff #ff6e27   #73fffe   
 client.unfocused        #000501 #000501 #ffffff #000501   #000501
-# client.focused_inactive
+client.focused_inactive #000501 #000501 #ffffff #000501   #000501
 # client.focused_tab_title
 # client.irgent (Xwayland only)
 

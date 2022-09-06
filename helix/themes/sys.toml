@@ -58,7 +58,7 @@ hint = "green"
 "ui.text.focus" = { fg = "faintetch" }
 
 "ui.background" = { bg = "bg" }
-"ui.statusline" = { fg = "black", bg = "uibg"} 
+"ui.statusline" = { fg = "black", bg = "uicyan"} 
 "ui.statusline.inactive" = { fg = "black", bg = "faintetch", modifiers=["dim"]} 
 
 "ui.linenr" = { fg = "faintetch", modifiers = ["dim"] }
@@ -101,6 +101,8 @@ faintetch = "#7c8184"
 
 bg = "#191d1e"
 uibg = "#2ab2b2"
+#uibg = "#00ffff"
+uicyan = "#00ffff"
 
 select = "#6F44F0"
 

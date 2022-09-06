@@ -37,9 +37,18 @@ exclude =[
   "qv4l2.desktop",
   "qvidcap.desktop",
   "lstopo.desktop",
+  "java*",
+  "catarina*",
+  "catia*",
+  "cadence*",
+  "cmake",
+  "qjack",
+  "xdvi",
   # Launched by other means
+  "libreoffice-startcenter.desktop",
   "Alacritty.desktop",
   "fish.desktop",
+  "torbrowser-settings",
   # ".desktop",
 ]
 
@@ -53,5 +62,7 @@ exclude =[
 "libreoffice-math"="Math"
 "libreoffice-startcenter"="Libreoffice"
 "libreoffice-writer"="Writer"
-
-
+"torbrowser"="Tor"
+"nm-connection-editor"="Networks"
+"gimp"="GIMP"
+"Inkscape"="Inkscape"

@@ -1,8 +1,7 @@
 
 
 
-Cyan, solid borders, generally straight lines, ocasional
-bevel/curved corners for effect, occaisonal double borders.
+Cyan, solid borders, generally straight lines -- go full scifi
 
 
 TODO: 
