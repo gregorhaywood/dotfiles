@@ -96,9 +96,9 @@ force_display_urgency_hint 100
 
 # class                 title   title   title   "new"	  normal
 #						border  bg		text	border	  border
-#client.focused          #8a35F1 #00ffff #ffffff #00ffff   #8a35F1   
+#client.focused          #8a35F1 #000501 #ffffff #00ffff   #8a35F1   
 #client.unfocused        #000501 #000501 #ffffff #000501   #000501
-client.focused          #8a35F1 #00ffff #ffffff #ff6e27   #73fffe   
+client.focused          #8a35F1 #000501 #ffffff #ff6e27   #00ffff   
 client.unfocused        #000501 #000501 #ffffff #000501   #000501
 client.focused_inactive #000501 #000501 #ffffff #000501   #000501
 # client.focused_tab_title

@@ -69,6 +69,8 @@ hint = "green"
 
 "ui.menu.selected" = { fg = "black", bg = "blue" }
 
+"ui.virtual.indent-guide" = {fg = "faintetch" }
+
 # Normally invert colours to show cursor
 "ui.cursor" = { modifiers = ["reversed"] }
 "ui.cursor.match" = { bg = "faintetch" }
@@ -85,6 +87,7 @@ hint = "green"
 "ui.highlight" = { modifiers = ["bold"]} 
 
 "ui.menu" = { fg = "black", bg = "yellow" }
+
 
 
 [palette]

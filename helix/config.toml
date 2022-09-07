@@ -11,8 +11,6 @@ center = []
 right = ["diagnostics", "position", "file-encoding", "file-type"]
 separator = "|"
 
-[editor.cursor-shape]
-insert = "underline"
 
 # Make this language-specific?
 [editor.indent-guides]
