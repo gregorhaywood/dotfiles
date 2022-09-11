@@ -1,111 +1,141 @@
 # syntax
 
+# TODO
+attribute = {fg="light-yellow"}
+
+type = "red"
+# "type.builtin" = {fg = "red", modifiers = ["bold"]}
+
+constructor = {fg="red",modifiers=["bold"]}
+
+# Includes pre-processor defines, etc.
 constant = {fg="cyan", modifiers=["bold"]}
+# Treat builtins like keywords
 "constant.builtin" = {fg="yellow", modifiers=["bold"]}
-# XXX: until updated
-escape = {fg = "etch", modifiers = ["dim"]}
-number = "etch"
-string = "etch"
-"string.special" = {fg = "etch", modifiers=["dim"]}
+# Treat others like text
+"constant.numeric" = {fg="white"}
+"constant.character" = {fg="white"}
+"constant.character.escape" = {fg="white", modifiers=["dim"]}
 
+string = "white"
+"string.special" = {fg = "white", modifiers=["dim"]}
+"string.regexp" = {fg = "magenta"}
 
+# All comments in one style
+comment = {fg="white", modifiers = ["dim"] }
+
+# Variables
 variable = "cyan"
 "variable.builtin"  = {fg = "cyan", modifiers = ["bold"]}
+"variable.other.member" = {fg = "blue"}
+
+label = {fg="cyan", modifiers = ["bold"]}
+
+punctuation = {fg="magenta"}
 
 keyword = {fg = "yellow", modifiers = ["bold"]}
-"keyword.directive" = {fg = "yellow", modifiers = ["bold", "dim"]}
-comment = {fg="etch", modifiers = ["dim"] }
-punctuation = {fg="purple", modifiers = []}
-operator = {fg="purple", modifiers = ["bold"]}
+"keyword.directive" = {fg = "light-yellow", modifiers = ["bold"]}
+
+operator = {fg="magenta", modifiers = ["bold"]}
 
 function = "green"
 "function.builtin" = {fg="green", modifiers = ["bold"]}
+"function.method" = {fg="blue", modifiers = ["bold"]}
 "function.special" = {fg="green", modifiers = ["bold"]}
+
+# TODO
+tag = {fg = "red"}
+
+# TODO
 namespace = {fg = "blue", modifiers = ["bold"]}
 
-type = "red"
-"type.builtin" = {fg = "red", modifiers = ["bold"]}
-constructor = {fg="red",modifiers=["bold"]}
-
-attribute = {fg="yellow",modifiers=["dim"]}
-
 # Markup Formating
-markup = {fg = "etch"}
-"markup.heading" = {fg = "etch", modifiers = ["bold"]}
-"markup.list.unnumbered" = {fg = "etch"}
-"markup.bold" = {fg = "mark", modifiers = ["bold"]}
-"markup.italic" = {fg = "mark", modifiers = ["italic"]}
-"markup.raw" = {fg = "mark", modifiers = ["bold"]}
+markup = {fg = "white"}
+"markup.heading" = {fg = "white", modifiers = ["bold"]}
+"markup.heading.marker" = {fg = "white", modifiers = ["dim"]}
+"markup.list.unnumbered" = {fg = "white", modifiers = ["dim"]}
+"markup.list.numbered" = {fg = "white", modifiers = ["dim"]}
+"markup.bold" = {fg = "white", modifiers = ["bold"]}
+"markup.italic" = {fg = "white", modifiers = ["italic"]}
+"markup.link" = {fg = "cyan", modifiers = ["bold"]}
+"markup.link.url" = {fg = "light-cyan", modifiers = ["underlined"]}
+"markup.quote" = {fg = "green"}
+"markup.raw" = {fg = "white", modifiers = ["dim"]}
 
-document = {fg = "mark"}
-
-# old
-label = {fg="cyan", modifiers = ["bold"]}
-# special = "red"
-property = "blue"
-# tag = "blue"
+"diff.plus" = {fg = "green"}
+"diff.minus" = {fg = "red"}
+"diff.delta" = {fg = "yellow"}
+"diff.delta.moved" = {fg = "cyan"}
 
 # UI
+## Background
+"ui.background" = { bg = "grey" }
+# "ui.background.seperator" -- unknown
 
-diagnostic = { modifiers = ["underlined"] }
-warning = {fg="yellow"}
-error = {fg="red", modifiers=["bold"]}
-info = "etch"
-hint = "green"
+## Line numbers
+"ui.linenr" = { fg = "white", modifiers=["dim"] }
+"ui.linenr.selected" = { fg = "white" }
 
-# "ui.text" = { fg = "purple" } 
-"ui.text" = { fg = "mark" } 
-"ui.text.focus" = { fg = "faintetch" }
+## Cursor is inverted, secondarys are dim
+"ui.cursor.primary" = { modifiers = ["reversed"]}
+"ui.cursor" = { modifiers = ["reversed", "dim"] }
+"ui.cursor.match" = { modifiers = ["reversed", "dim"] }
+# "ui.cursor.select" -- unknown 
+# "ui.cursor.insert" -- unknown
 
-"ui.background" = { bg = "bg" }
-"ui.statusline" = { fg = "black", bg = "uicyan"} 
-"ui.statusline.inactive" = { fg = "black", bg = "faintetch", modifiers=["dim"]} 
+"ui.statusline" = { fg = "black", bg = "cyan"} 
+# "ui.statusline.inactive" -- unfocused document
+# "ui.statusline.normal" -- normal mode (enable editor.color-modes)
+# "ui.statusline.insert" -- insert mode (enable editor.color-modes)
+# "ui.statusline.select" -- select mode (enable editor.color-modes)
+# "ui.statusline.separator" -- seperator character
 
-"ui.linenr" = { fg = "faintetch", modifiers = ["dim"] }
-"ui.linenr.selected" = { fg = "mark"}
+"ui.window" = { fg = "cyan" } # borders for splits
 
-"ui.popup" = { bg = "uibg", fg = "black" }
-"ui.help" = { bg = "uibg", fg = "black" }
+# Prompts, popups, etc.
+"ui.text" = { fg = "white" } 
+"ui.text.focus" = { fg = "black", bg = "cyan" }
+"ui.text.info" = { fg = "light-cyan" }
+"ui.popup.info" = {bg = "black", fg = "cyan", modifiers = [] }
+"ui.help" = {bg = "cyan", fg = "black"}
 
+## Virtual indicators
+# "ui.virtual.ruler" -- eg, end of line ref
+"ui.virtual.indent-guide" = {fg = "light-cyan" }
+# "ui.virtual.whitespace" -- do not show
+
+# Selection highlighting
+"ui.selection" = { bg = "light-blue" }
+"ui.selection.primary" = { bg = "magenta" }
+
+# Don't highlight lines with cursors
+# "ui.cursorline" = { }
+
+# LSP Menus
+"ui.menu" = { fg = "light-cyan", bg = "black" }
 "ui.menu.selected" = { fg = "black", bg = "blue" }
-
-"ui.virtual.indent-guide" = {fg = "faintetch" }
-
-# Normally invert colours to show cursor
-"ui.cursor" = { modifiers = ["reversed"] }
-"ui.cursor.match" = { bg = "faintetch" }
-"ui.cursor.select" = { bg = "select" }
-# "ui.cursor.insert" = { bg = "red" }
-
-#old
-
-"ui.window" = { fg = "faintetch" }
-
-"ui.selection" = { bg = "#510000" }
-"ui.selection.primary" = { bg = "#510099" }
-# TODO: namespace ui.cursor as ui.selection.cursor?
-"ui.highlight" = { modifiers = ["bold"]} 
-
-"ui.menu" = { fg = "black", bg = "yellow" }
+"ui.popup" = {bg = "black", fg = "cyan"}
 
 
+## Gutter indicators for warnings, errors, etc.
+warning = {fg="yellow"}
+error = {fg="red"}
+info = "green"
+hint = "magenta"
+## Error highlighting
+diagnostic = { modifiers = ["underlined"] }
+"diagnostic.error" = {bg = "red", fg = "black"}
+"diagnostic.warning" = {bg = "yellow", fg = "black"}
 
-[palette]
-black = "#000501"
-red = "#f86844"
-green = "#14b36e"
-yellow = "#faaf00"
-blue = "#8476EA" # TODO
-purple = "#8a35f1"
-cyan = "#00edd7" # TODO
-mark = "#e5eef7"
-etch = "#d0d9e1"
-faintetch = "#7c8184"
 
-bg = "#191d1e"
-uibg = "#2ab2b2"
-#uibg = "#00ffff"
-uicyan = "#00ffff"
+# Unimplemented / unknown
+"ui.menu.scroll" = {bg = "red", fg = "red"}
 
-select = "#6F44F0"
+# [palette]
 
+# Alacritty Colour Map
+# white -> bright white
+# white w dim modifier -> normal white
+# grey -> primary background
+# Else: normal, with light-X being the bright version
+#  and dim modifier getting dim colours
