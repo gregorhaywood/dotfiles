@@ -4,7 +4,6 @@ theme = "sys"
 [editor]
 shell = ["fish"]
 
-
 [editor.statusline]
 left = ["mode", "spinner", "file-name"]
 center = []
