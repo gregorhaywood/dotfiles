@@ -13,6 +13,7 @@
 * Systemd: link dir
 * Bottom: link dir
 * Sirula: link dir
+* swaylock: link file to ~/.config/swaylock/config
 
 Config files going elsehere:
 

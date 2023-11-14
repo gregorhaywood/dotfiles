@@ -24,7 +24,7 @@ input type:touchpad {
 # Output
 
 xwayland enable
-seat * hide_cursor 600
+seat * hide_cursor when-typing enable
 
 
 # Controls
@@ -113,9 +113,11 @@ bindsym $mod+Shift+h move workspace to output $right
 bindsym $mod+Shift+g move workspace to output $left
 
 ## Lockscreen Shortcuts 
-bindsym $mod+l $exec $scripts/lock.sh lock
-bindsym $mod+Control+l $exec $scripts/lock.sh suspend
-bindsym $mod+Control+Shift+l $exec $scripts/lock.sh hibernate
+bindsym $mod+l $exec swaylock
+bindsym $mod+Control+l $exec systemctl suspend
+bindsym $mod+Control+Shift+l $exec systemctl hibernate
+
+exec swayidle -w before-sleep 'swaylock'
 
 ## Volume
 bindsym XF86AudioRaiseVolume $exec $scripts/sound.sh up

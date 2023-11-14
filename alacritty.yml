@@ -185,9 +185,10 @@ colors:
       foreground: CellForeground
       background: '#1928e3'
 
-    bar:
-      background: '#4d14dc'
-      foreground: '#ffffff'
+    colors:
+      footer_bar:
+        background: '#4d14dc'
+        foreground: '#ffffff'
 
   # Keyboard regex hints
   #hints:
