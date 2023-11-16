@@ -1,12 +1,25 @@
 #! /bin/bash
 
 
+# assumed setup:
+# pipewire-alsa
+# alsa-utils
+# 
+# wireplumber
+# pipewire
+# pipewire-audio
+# 
+# Not:
+# * jack
+# * pulseaudio
+
+
 function vol {
     amixer get Master | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1
 }
 
 function isMute {
-    amixer get Master | grep '%' | head -n 1 | cut -d '[' -f 4 | cut -d ']' -f 1
+    amixer get Master | grep '%' | head -n 1 | cut -d '[' -f 3 | cut -d ']' -f 1
 }
 
 up() {
@@ -28,18 +41,17 @@ mute() {
 	volume=`vol`
 	case `isMute` in
 		on)
-			amixer set Headphone mute
 			amixer set Master mute
 			sym="audio-volume-muted-symbolic"
 			;;
 		off)
-			amixer set Headphone unmute
 			amixer set Master unmute
 			sym="audio-volume-high-symbolic"
 			;;
 	esac
 	
-	notify-send -i $sym -c sound -h "INT:value:$volume" "sound"
+	# notify-send -i "audio-volume-low-symbolic" -c sound -h "INT:value:$volume" "sound"
+	notify-send -i "$sym" -c sound -h "INT:value:$volume" "sound"
 }
 
 case "$1" in
