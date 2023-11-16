@@ -105,7 +105,6 @@ client.focused_inactive #000501 #000501 #ffffff #000501   #000501
 # Startup applications
 exec --no-startup-id dunst
 
-
 # Keybindings
 
 ## Workplace--Monitor assignments
@@ -118,6 +117,11 @@ bindsym $mod+Control+l $exec systemctl suspend
 bindsym $mod+Control+Shift+l $exec systemctl hibernate
 
 exec swayidle -w before-sleep 'swaylock'
+
+exec swayidle -w \
+	timeout 1800 'if pgrep -x swaylock; then swaymsg "output * dpms off"; fi' \
+		resume 'swaymsg "output * dpms on"' 
+
 
 ## Volume
 bindsym XF86AudioRaiseVolume $exec $scripts/sound.sh up
