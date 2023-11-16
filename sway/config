@@ -24,7 +24,7 @@ input type:touchpad {
 # Output
 
 xwayland enable
-seat * hide_cursor 600
+seat * hide_cursor when-typing enable
 
 
 # Controls
