@@ -1,0 +1,135 @@
+*{
+	all: unset;
+	// font-family: feather;
+	// font-family: DaddyTimeMono NF;
+}
+.green {
+  color:#14b36e; 
+}
+.yellow{
+  color: #ffc61a;
+}
+.red{
+  color: #f86844;
+}
+
+
+.sys_win {
+    background-color: #13141c;
+    border-radius: 18px;
+}
+.cpu_win {
+    background-color: #13141c;
+    border-radius: 18px;
+    padding: 0px 10px 0px 12px;
+}
+.sys_box, .cpu_box {
+    border-radius: 16px;
+    margin: 0px;
+}
+.cpu_box_i {
+    border-radius: 16px;
+    margin: -10px 0px 0px 35px;
+}
+.sys_icon {
+    font-size: 30px;
+    margin: 30px;
+}
+.sys_dial {
+    background-color: #232232;
+    border-radius: 10px;
+    margin: 15px 15px 15px 15px;
+}
+.cpu_dial {
+    background-color: #232232;
+    border-radius: 10px;
+    margin: 5px 5px 5px 5px;
+}
+.cpu_icon {
+    font-size: 30px;
+    margin: 15px;
+}
+
+
+
+
+
+/** time **/
+.hour_class {
+    color: #bec8da;
+    font-size: 45px;
+    font-weight: bold;
+    margin: 15px 0px 0px 20px;
+}
+
+.minute_class {
+    color: #bec8da;
+    font-size: 45px;
+    margin: 15px 10px 0px 20px;
+}
+
+.meridiem_class {
+    color: #bec8da;
+    font-size: 30px;
+    margin: 30px 20px 0px 5px;
+}
+
+.day_class {
+    color: #767c88;
+    font-size: 30px;
+    margin: 0px 0px 10px 10px;
+}
+
+.month_class {
+    color: #767c88;
+    font-size: 30px;
+    margin: 0px 10px 10px 10px;
+}
+
+
+.time_sep_class {
+    color: #bec8da;
+    font-size: 30px;
+    margin: 10px 0px 0px 5px;
+}
+
+.day_class_n {
+    color: #767c88;
+    font-size: 18px;
+    margin: 10px 0px 10px 30px;
+}
+
+.month_class_n {
+    color: #767c88;
+    font-size: 18px;
+    margin: 0px 30px 0px 0px;
+}
+
+
+
+
+
+.profile_picture {
+	background-image: url('images/profile.png');
+	background-size: 175px;
+	background-position: 50% 35%;
+	min-height: 175px;
+	min-width: 175px;
+	margin: 20px 0px 0px 2px;
+	border-radius: 100%;
+}
+
+.profile_greeting {
+	color: #bbc6cb;
+	font-size : 30px;
+	font-weight : bold;
+}
+
+.profile_username {
+	color: #a1bdce;
+	font-size : 26px;
+	font-weight : bold;
+	margin : -15px 0px 0px 0px;
+}
+
+

@@ -9,6 +9,7 @@ end
 starship init fish | source
 
 export XDG_CONFIG_HOME="$HOME/.config"
+export GRIM_DEFAULT_DIR="$HOME/grim"
 export GREP_COLORS='ms=01;4;32:mc=01;4;32:sl=:cx=:fn=35:ln=32:bn=32:se=36'
 
 alias ls='ls --color=auto'
