@@ -17,8 +17,8 @@
 (defwidget system []
   (box :class "win" :orientation "h" :space-evenly "false" :hexpand "false" :vexpand "false" :spacing 0 
       (box :class "sys_box" :orientation "h" :space-evenly "false" :hexpand "false" :vexpand "false"
-      (circular-progress :value { EWW_BATTERY.BAT0.capacity }
-                :class {EWW_BATTERY.BAT0.status =~ "Full" ? "sys_dial green" :
+      (circular-progress :value { EWW_BATTERY == "" ? 100 : EWW_BATTERY.BAT0.capacity }
+                :class {EWW_BATTERY == "" ? "sys_dial green" : EWW_BATTERY.BAT0.status =~ "Full" ? "sys_dial green" :
 								EWW_BATTERY.BAT0.capacity < 20 ? "sys_dial red" : "sys_dial yellow"}
                 :thickness 11
 				    		:color "00ff00"

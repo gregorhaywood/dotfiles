@@ -26,7 +26,6 @@ Config files going elsehere:
 
 * brave-bin
 * swaylock-effects-git
-* wev
 
 texcount
 
