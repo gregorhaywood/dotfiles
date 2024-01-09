@@ -1,0 +1,73 @@
+[colors.bright]
+blue = "#3a0877"
+cyan = "#00e6cf"
+white = "#e5eef7"
+yellow = "#cc8f00"
+
+[colors.cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[colors.line_indicator]
+background = "#f96944"
+foreground = "#ffffff"
+
+[colors.normal]
+black = "#000501"
+blue = "#8476ea"
+cyan = "#00ffff"
+green = "#14b36e"
+magenta = "#8a35f1"
+red = "#f86844"
+white = "#7c8184"
+yellow = "#ffc61a"
+
+[colors.primary]
+background = "#191d1e"
+foreground = "#e5eef7"
+
+# [colors.search.colors.footer_bar]
+# background = "#4d14dc"
+# foreground = "#ffffff"
+
+[colors.search.focused_match]
+background = "#1928e3"
+foreground = "CellForeground"
+
+[colors.search.matches]
+background = "#14b36e"
+foreground = "CellForeground"
+
+[colors.vi_mode_cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[font]
+size = 17.0
+
+[font.bold]
+style = "Bold"
+
+[font.bold_italic]
+style = "Bold Italic"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+style = "Italic"
+
+[font.normal]
+family = "Hermit"
+style = "Medium"
+
+[font.offset]
+x = 0
+y = 0
+
+[shell]
+program = "/bin/fish"
+
+[window]
+opacity = 0.9
